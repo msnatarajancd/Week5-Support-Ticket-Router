@@ -89,7 +89,7 @@ import yaml
 manifest = {'status':'prepared_not_trained','source_revision':SOURCE_REV,
     'factory_revision':FACTORY_REV,'base_model':BASE_MODEL,'base_revision':MODEL_REV,
     'gpu':GPU,'max_training_tokens':max_length,'cutoff':CUTOFF,
-    'dataset_sha256':audit['source_sha256'],'config':CONFIG}
+    'dataset_sha256':audit['source_sha256'],'recommended_config':CONFIG}
 (ART/'run_manifest.json').write_text(json.dumps(manifest,indent=2))
 (ART/'pip-freeze.txt').write_text(subprocess.check_output([sys.executable,'-m','pip','freeze'],text=True))
 print('Model path:',BASE_PATH,'\\nOutput directory:',ADAPTER_DIR,'\\nCutoff:',CUTOFF)
@@ -123,6 +123,10 @@ assert state['global_step'] >= state['max_steps'] > 0, 'Training is incomplete'
 logs = [json.loads(line) for line in (ADAPTER_DIR/'trainer_log.jsonl').read_text().splitlines() if line.strip()]
 loss_logs = [x for x in logs if x.get('loss') is not None]
 assert loss_logs, 'No training loss values'
+actual_path = ADAPTER_DIR/'training_args.yaml'
+assert actual_path.exists(), 'Export the actual training arguments from LLaMA Board before evaluation'
+actual_config = validate_training_config(yaml.safe_load(actual_path.read_text()),CONFIG)
+manifest['actual_training_config'] = actual_config
 plt.figure(figsize=(10,4)); plt.plot([x['current_steps'] for x in loss_logs],[x['loss'] for x in loss_logs])
 plt.xlabel('Step'); plt.ylabel('Training loss'); plt.title('Actual LoRA training loss'); plt.grid(alpha=.3)
 plt.tight_layout(); plt.savefig(ART/'training_curve.png',dpi=150); plt.show()
@@ -144,6 +148,9 @@ torch.cuda.empty_cache()
 tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_DIR)
 model = AutoModelForCausalLM.from_pretrained(BASE_PATH,torch_dtype=torch.float16,device_map='cuda')
 model.eval()
+GENERATION_OPTIONS = generation_options(tokenizer,template)
+model.generation_config.eos_token_id = GENERATION_OPTIONS['eos_token_id']
+model.generation_config.pad_token_id = GENERATION_OPTIONS['pad_token_id']
 choices = 'ABCDEFG'
 choice_ids = [tokenizer.encode(ch,add_special_tokens=False) for ch in choices]
 assert all(len(x)==1 for x in choice_ids) and len(set(x[0] for x in choice_ids))==7
@@ -160,7 +167,7 @@ def base_predict(ticket):
 def tuned_predict(ticket):
     inp=inputs_for(ticket)
     with torch.inference_mode():
-        out=model.generate(**inp,max_new_tokens=24,do_sample=False,pad_token_id=tokenizer.eos_token_id)
+        out=model.generate(**inp,**GENERATION_OPTIONS)
     raw=tokenizer.decode(out[0,inp['input_ids'].shape[1]:],skip_special_tokens=True).strip()
     return parse_label(raw),raw
 validation=pd.read_csv(ART/'data/val_split.csv')
@@ -174,10 +181,12 @@ smoke=[('Please create a new user account for the employee starting Monday.','Ac
  ('The printer has a paper jam and will not print.','Computer-Services'),
  ('I need help contacting the support team about a general request.','Support general')]
 model=PeftModel.from_pretrained(model,str(ADAPTER_DIR)); model.eval()
-adapter_smoke=[tuned_predict(t)[0] for t,_ in smoke]
+adapter_results=[tuned_predict(t) for t,_ in smoke]
 model=model.merge_and_unload(safe_merge=True); model.eval()
-merged_smoke=[tuned_predict(t)[0] for t,_ in smoke]
-assert adapter_smoke==merged_smoke, 'Merge changed smoke predictions; investigate before proceeding'
+merged_results=[tuned_predict(t) for t,_ in smoke]
+verify_merge(adapter_results,merged_results,str(ART/'merge_comparison.json'))
+adapter_smoke=[x[0] for x in adapter_results]
+merged_smoke=[x[0] for x in merged_results]
 model.save_pretrained(MERGED_DIR,safe_serialization=True); tokenizer.save_pretrained(MERGED_DIR)
 smoke_df=pd.DataFrame({'ticket':[t for t,_ in smoke],'expected':[l for _,l in smoke],
                        'adapter':adapter_smoke,'merged':merged_smoke})
@@ -217,20 +226,27 @@ manifest.update(status='evaluated',heldout_rows=len(validation),smoke_passed=int
 (ART/'run_manifest.json').write_text(json.dumps(manifest,indent=2))
 print('EVALUATION COMPLETE — preserve artifacts and the executed notebook before disconnecting.')
 ''','evaluate')
-md('''## Save evidence
-Download the evidence ZIP and executed notebook (File → Download → Download .ipynb).
-The ZIP contains metrics, predictions, logs and charts; it excludes the multi-GB merged
-model. Preserve the adapter separately below. Upload the notebook, evidence and adapter
-to the Week 5 project Drive folder. The merged checkpoint remains in this runtime
-until exported; do not disconnect before preserving any checkpoint you need.
+md('''## Save evidence and verified checkpoints
+Mount Google Drive when prompted. The cell copies and verifies the evidence, adapter,
+tokenizer and merged checkpoint into a persistent Week5-Support-Ticket-Router folder
+in My Drive. Move that folder into the designated Week 5 Project folder afterward.
+The multi-GB merged checkpoint is retained outside Git. Save the executed notebook too.
 ''')
 code('''
-from google.colab import files
+from google.colab import files, drive
+drive.mount('/content/drive')
+PERSIST = Path('/content/drive/MyDrive/Week5-Support-Ticket-Router')
+PERSIST.mkdir(parents=True,exist_ok=True)
+preserved = {}
+for name,source in [('adapter',ADAPTER_DIR),('merged_model',MERGED_DIR),('training_tokenizer',TOKENIZER_DIR)]:
+    preserved[name] = preserve_directory(str(source),str(PERSIST/name))
+manifest.update(status='preserved',persistent_directory=str(PERSIST),checkpoint_files=preserved)
+(ART/'run_manifest.json').write_text(json.dumps(manifest,indent=2))
+preserved['evidence'] = preserve_directory(str(ART),str(PERSIST/'artifacts'))
+(PERSIST/'preservation_manifest.json').write_text(json.dumps(preserved,indent=2))
 archive=shutil.make_archive(str(ROOT/'week5-evidence'),'zip',ART)
 files.download(archive)
-adapter_archive=shutil.make_archive(str(ROOT/'week5-lora-adapter'),'zip',ADAPTER_DIR)
-files.download(adapter_archive)
-print('Merged checkpoint:',MERGED_DIR)
+print('VERIFIED PERSISTENT CHECKPOINTS AND EVIDENCE:',PERSIST)
 ''','save')
 notebook=nbf.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'colab':{'name':'Week5_Support_Ticket_Router.ipynb'},'accelerator':'GPU'})
 nbf.write(notebook,ROOT/'notebooks/Week5_Support_Ticket_Router.ipynb')

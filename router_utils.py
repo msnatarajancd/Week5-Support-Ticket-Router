@@ -2,6 +2,7 @@
 import hashlib
 import json
 import math
+import shutil
 from pathlib import Path
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -72,3 +73,43 @@ def evaluate_predictions(truth: list[str], predictions: list[str]) -> dict:
             'per_class': {label:report[label] for label in LABELS},
             'confusion_labels': list(LABELS)+[INVALID],
             'confusion_counts': confusion_matrix(truth,pred,labels=list(LABELS)+[INVALID]).tolist()}
+
+def generation_options(tokenizer, template) -> dict:
+    return {'eos_token_id': template.get_stop_token_ids(tokenizer),
+            'pad_token_id': tokenizer.eos_token_id, 'do_sample': False, 'max_new_tokens': 24}
+
+def verify_merge(adapter_outputs: list, merged_outputs: list, output_path: str) -> dict:
+    result = {'adapter_outputs': adapter_outputs, 'merged_outputs': merged_outputs,
+              'matches': bool(adapter_outputs) and adapter_outputs == merged_outputs}
+    Path(output_path).write_text(json.dumps(result,indent=2),encoding='utf-8')
+    if not result['matches']:
+        raise ValueError('Merge output mismatch; raw evidence saved for investigation')
+    return result
+
+def validate_training_config(actual: dict, expected: dict) -> dict:
+    critical = ('model_name_or_path','template','dataset','cutoff_len','finetuning_type')
+    mismatches = [k for k in critical if actual.get(k) != expected.get(k)]
+    if mismatches:
+        raise ValueError('Training configuration mismatch or missing: '+', '.join(mismatches))
+    return actual
+
+def preserve_directory(source: str, destination: str) -> list[dict]:
+    src, dst = Path(source).resolve(), Path(destination).resolve()
+    if src == dst or src in dst.parents or dst in src.parents:
+        raise ValueError('Preservation source and destination must be separate directories')
+    files = [p for p in src.rglob('*') if p.is_file()]
+    if not files:
+        raise ValueError('Nothing to preserve')
+    manifest = []
+    def digest(path):
+        with path.open('rb') as stream:
+            return hashlib.file_digest(stream,'sha256').hexdigest()
+    for path in files:
+        target=dst/path.relative_to(src)
+        target.parent.mkdir(parents=True,exist_ok=True)
+        expected=digest(path)
+        shutil.copy2(path,target)
+        if digest(target) != expected or target.stat().st_size != path.stat().st_size:
+            raise ValueError('Preserved file verification failed: '+str(target))
+        manifest.append({'path':str(path.relative_to(src)),'bytes':target.stat().st_size,'sha256':expected})
+    return manifest

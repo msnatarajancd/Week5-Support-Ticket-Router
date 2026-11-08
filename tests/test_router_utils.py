@@ -80,3 +80,36 @@ class MetricTests(unittest.TestCase):
             with self.assertRaises(ValueError): r.evaluate_predictions(truth,pred)
 
 if __name__ == '__main__': unittest.main()
+
+class RuntimeSafetyTests(unittest.TestCase):
+    def test_generation_stops_at_training_template_eos(self):
+        class Tokenizer: eos_token_id = 151645
+        class Template:
+            def get_stop_token_ids(self, tokenizer): return [151645, 151643]
+        options = r.generation_options(Tokenizer(), Template())
+        self.assertEqual(options['eos_token_id'], [151645,151643])
+        self.assertEqual(options['pad_token_id'],151645)
+
+    def test_raw_merge_disagreement_is_saved_even_when_labels_invalid(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'comparison.json'
+            with self.assertRaises(ValueError):
+                r.verify_merge([('bad output A','__invalid__')],[('bad output B','__invalid__')],str(path))
+            self.assertTrue(path.exists())
+            self.assertFalse(json.loads(path.read_text())['matches'])
+
+    def test_actual_training_configuration_must_match_critical_settings(self):
+        expected={'model_name_or_path':'model','template':'qwen3_nothink','dataset':'support_tickets','cutoff_len':1024,'finetuning_type':'lora'}
+        self.assertEqual(r.validate_training_config(dict(expected),expected), expected)
+        for key in expected:
+            actual=dict(expected); actual[key]='WRONG'
+            with self.assertRaises(ValueError): r.validate_training_config(actual,expected)
+        with self.assertRaises(ValueError): r.validate_training_config({},expected)
+
+    def test_preserved_checkpoint_is_verified_by_hash(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); src=root/'source'; src.mkdir(); (src/'model.bin').write_bytes(b'checkpoint')
+            manifest=r.preserve_directory(str(src),str(root/'persistent'))
+            self.assertEqual((root/'persistent/model.bin').read_bytes(),b'checkpoint')
+            self.assertEqual(manifest[0]['bytes'],10)
+            self.assertEqual(len(manifest[0]['sha256']),64)
