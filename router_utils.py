@@ -74,6 +74,11 @@ def evaluate_predictions(truth: list[str], predictions: list[str]) -> dict:
             'confusion_labels': list(LABELS)+[INVALID],
             'confusion_counts': confusion_matrix(truth,pred,labels=list(LABELS)+[INVALID]).tolist()}
 
+def validate_native_eos(native_id: int, training_id: int) -> None:
+    if native_id is None or native_id != training_id:
+        raise ValueError('Frozen base-model embeddings require the native EOS for this LoRA run')
+
+
 def generation_options(tokenizer, template) -> dict:
     return {'eos_token_id': template.get_stop_token_ids(tokenizer),
             'pad_token_id': tokenizer.eos_token_id, 'do_sample': False, 'max_new_tokens': 24}

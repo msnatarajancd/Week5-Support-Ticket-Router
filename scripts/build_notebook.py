@@ -69,10 +69,12 @@ BASE_MODEL = 'Qwen/Qwen3-1.7B-Base'
 MODEL_REV = HfApi().model_info(BASE_MODEL).sha
 BASE_PATH = snapshot_download(BASE_MODEL,revision=MODEL_REV)
 tokenizer = AutoTokenizer.from_pretrained(BASE_PATH)
-template = get_template_and_fix_tokenizer(tokenizer,DataArguments(template='qwen3_nothink'))
+native_eos_id = tokenizer.eos_token_id
+template = get_template_and_fix_tokenizer(tokenizer,DataArguments(template='default'))
+validate_native_eos(native_eos_id,tokenizer.eos_token_id)
 TOKENIZER_DIR = ROOT/'training_tokenizer'; tokenizer.save_pretrained(TOKENIZER_DIR)
 records = json.loads((ART/'data/train.json').read_text())
-max_length = max(len(tokenizer.apply_chat_template(x['messages'],tokenize=True)) for x in records)
+max_length = max(len(tokenizer.encode(tokenizer.apply_chat_template(x['messages'],tokenize=False),add_special_tokens=False)) for x in records)
 CUTOFF = max(1024, ((max_length+63)//64)*64)
 assert CUTOFF <= 4096, 'Unexpectedly long data: inspect before training'
 ADAPTER_DIR = FACTORY/'saves/Week5-Qwen3-1.7B/lora/router'
@@ -80,7 +82,7 @@ MERGED_DIR = ROOT/'merged_model'
 CONFIG = {'model_name_or_path':BASE_PATH,'stage':'sft','do_train':True,
     'finetuning_type':'lora','lora_rank':8,'lora_alpha':16,'lora_target':'all',
     'dataset':'support_tickets','dataset_dir':str(FACTORY/'data'),
-    'template':'qwen3_nothink','cutoff_len':CUTOFF,'max_samples':100000,
+    'template':'default','cutoff_len':CUTOFF,'max_samples':100000,
     'output_dir':str(ADAPTER_DIR),'logging_steps':5,'save_steps':100,
     'plot_loss':True,'report_to':'none','per_device_train_batch_size':1,
     'gradient_accumulation_steps':8,'learning_rate':1e-4,'num_train_epochs':3.0,
@@ -99,7 +101,7 @@ print((ART/'recommended_training.yaml').read_text())
 ''', 'preflight')
 md('''## 3. Fine-tune through LLaMA Board
 Use the embedded LLaMA Board below. Select Qwen3-1.7B-Base, and set **Model path** to
-the pinned local model path printed above. Select **qwen3_nothink**, dataset
+the pinned local model path printed above. Select **default**, dataset
 **support_tickets**, and **LoRA**. Use the configuration printed above:
 rank 8, alpha 16, all linear targets, learning rate 0.0001, epochs 3,
 batch 1, accumulation 8, fp16, seed 42 and the displayed cutoff/output directory.

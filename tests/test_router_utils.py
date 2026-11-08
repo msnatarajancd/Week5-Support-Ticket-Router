@@ -82,6 +82,11 @@ class MetricTests(unittest.TestCase):
 if __name__ == '__main__': unittest.main()
 
 class RuntimeSafetyTests(unittest.TestCase):
+    def test_frozen_base_model_rejects_replaced_eos(self):
+        r.validate_native_eos(151643,151643)
+        with self.assertRaisesRegex(ValueError,'native EOS'):
+            r.validate_native_eos(151643,151645)
+
     def test_generation_stops_at_training_template_eos(self):
         class Tokenizer: eos_token_id = 151645
         class Template:
