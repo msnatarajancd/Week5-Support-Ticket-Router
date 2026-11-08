@@ -59,6 +59,8 @@ info_path.write_text(json.dumps(info,indent=2))
 print(json.dumps({{k:v for k,v in audit.items() if not k.endswith('row_ids')}},indent=2))
 ''', 'data')
 code('''
+import sys
+sys.path.insert(0, str(FACTORY/'src'))
 from transformers import AutoTokenizer
 from huggingface_hub import HfApi, snapshot_download
 from llamafactory.data import get_template_and_fix_tokenizer
@@ -96,7 +98,7 @@ print('Model path:',BASE_PATH,'\\nOutput directory:',ADAPTER_DIR,'\\nCutoff:',CU
 print((ART/'recommended_training.yaml').read_text())
 ''', 'preflight')
 md('''## 3. Fine-tune through LLaMA Board
-Open the URL printed below. Select Qwen3-1.7B-Base, and set **Model path** to
+Use the embedded LLaMA Board below. Select Qwen3-1.7B-Base, and set **Model path** to
 the pinned local model path printed above. Select **qwen3_nothink**, dataset
 **support_tickets**, and **LoRA**. Use the configuration printed above:
 rank 8, alpha 16, all linear targets, learning rate 0.0001, epochs 3,
@@ -105,12 +107,12 @@ Preview and save the actual training arguments before starting. Wait for complet
 The server runs in a subprocess so the notebook can continue after training.
 ''')
 code('''
-env = os.environ.copy(); env['GRADIO_SHARE']='1'; env['GRADIO_SERVER_PORT']='7860'
+env = os.environ.copy(); env['GRADIO_SHARE']='0'; env['GRADIO_SERVER_PORT']='7860'
 ui_log = open(ART/'llamaboard.log','a',buffering=1)
 ui_process = subprocess.Popen(['llamafactory-cli','webui'],cwd=FACTORY,env=env,stdout=ui_log,stderr=subprocess.STDOUT)
 print('LLaMA Board PID:',ui_process.pid)
 ''', 'board')
-code("print((ART/'llamaboard.log').read_text()[-12000:])", 'board_url')
+code("print((ART/'llamaboard.log').read_text()[-12000:])\nfrom google.colab import output\noutput.serve_kernel_port_as_iframe(7860, height=900)", 'board_url')
 md('## 4. Review completed training\nRun only after LLaMA Board reports training completed. If its output path differs, set ADAPTER_DIR to the actual path before continuing.')
 code('''
 import matplotlib.pyplot as plt
