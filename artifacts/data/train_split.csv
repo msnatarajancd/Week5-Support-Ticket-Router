@@ -1,0 +1,469 @@
+text,label,row_id
+"Hi there, we have a new employee starting and I need a full Windows account created for them — this should include email access through Exchange, Skype, and the standard shared drive access that everyone gets. Please let me know if you need any additional details.",Support general,467
+"Hey, I need full read/write access to N:/[SERVER]/STA-LEM including all subfolders — I was trying to save a file there earlier and got an access denied error.",Fileservice,193
+I'm getting a BitLocker lockout notice on [NAME]'s machine and can't get past it — we need access urgently. Can someone help unlock it right away?,Software,385
+"Hey, I need Parallels installed on my machine. Could someone help get that set up for me?",Software,379
+"Hi, I need to request access to a file share — could someone reach out so we can get the details sorted? Thanks.",Fileservice,281
+"Hello, we have a new team member starting and need a user account created for them. Could you help get that set up? Let me know what information you need from me.",Fileservice,269
+"Hey, I need read/write access to the j:/stundenbuecher folder on the J: drive. Could you get that sorted out for me? Thanks a lot!",Fileservice,161
+"Hi, could you please give me read/write access to the file share at N:/share_/Döbbert? I need to be able to save files there. Thanks!",Fileservice,240
+"Hi, Skype isn't logging in on my computer at all — I've tried a couple of times but it just won't sign in. Can someone help me get this working again?",O365,358
+"Hi, I need a new user account created for a new employee with username [USERNAME], including corporate network access and an email account. This is for location ID 13413 — [LOCATION]. Please let me know if you need anything else.",Active Directory,6
+"Hi, I need help with the activation of [LOCATION] equipment on [SERVER]. Can someone assist with getting that set up?",Support general,487
+"Hey, Skype for Business just won't connect for me — it keeps trying and then fails. It's been like this for a bit now and I really need to get it working. Can someone help?",O365,365
+"Hey, I need read/write access to several folders on the J: drive: J:/CLC-Server, J:/CS-MED, J:/Geldokumentation, and J:/MOL_Service. Could you get those permissions sorted out for me? Thanks!",Fileservice,206
+"Hi, I need access to some email folders but I'm not able to get in right now. Could someone grant me the right permissions?",O365,314
+"Hi, [NAME] is having two issues — Outlook isn't working at all and there's also no internet connection on their machine. Can someone come by to help as soon as possible?",O365,299
+"Hi, I'm having an issue with my iPad Pro and need some help sorting it out — could someone from IT take a look?",Support general,525
+"Hi, could you please add [NAME] to the Shakopee Employees Distribution List? Thanks so much!",O365,353
+"Hi, I'd like to request access to a file share — could someone help get that set up for me? Please let me know if you need any additional details.",Fileservice,225
+"We're decommissioning [SERVER] and need a few things handled: removal from Nexthink, a check on any IP reservations, and a heads-up to the network team to remove the firewall rules. Thanks in advance!",EOL,99
+"Hi, I need help with something related to [COMPANY] at [LOCATION] on [SERVER]. Could someone reach out so I can explain what's needed?",Active Directory,43
+This was initiated by [COMPANY] [LOCATION] — there's a vulnerable [LOCATION] identified at [LOCATION]-[ADDRESS] that needs to be investigated.,Support general,491
+"Hi team, we have an employee who is leaving and we need to get their offboarding taken care of — that means deleting their Windows and email accounts, revoking access to all systems, and arranging for their hardware to be returned. Please let me know what you need from me to move this forward.",Active Directory,36
+"Hey, it looks like a shared drive was set up on the wrong drive by mistake — could someone help get that moved to the correct location?",O365,370
+"Hi, I need a software installation done on my computer. Could someone help get that set up for me?",Software,429
+"Hello, I need a Basic User account created for [NAME] (username: [USERNAME]) — they're based at [COMPANY], [LOCATION]. Could you get this set up for them please?",Support general,441
+"Hey, could you please set me up with read and write access to the j:/stundenbuecher file share? I need to be able to open and save files there. Thanks!",Fileservice,264
+Could you please add some users to our existing shared mailboxes? Let me know if you need a list of who needs access to which mailbox.,O365,334
+"Hi there, could you please set up read/write access for me on J:/[COMPANY]/? I'll need access to all the subfolders in there as well, thanks.",Fileservice,192
+"Hello, I need a light external user account set up for someone outside the company — just email and basic access is all they need. Please let me know once it's ready!",Support general,473
+"Hi, I'm following up on a ticket that was reopened — this is regarding the Light User external account request for [NAME], original ticket [TICKET ID]. Could you take another look when you get a chance?",Support general,508
+"Hello, could you please set up a new user account? Let me know if you need any additional details from me.",Fileservice,256
+"Hello, could you please set up full access on the J:/[SERVER] share for [NAME]-Weiss? She needs to be able to read and write to that folder. Thank you!",Fileservice,151
+"Hi, please process the decommission for [SERVER] — remove it from Nexthink, check that no IP reservations are still attached, and loop in the network team so they can remove the associated firewall rules.",EOL,134
+"Hey, I should have access to J:/ZR-VVM but I don't think I'm able to get in. Could you check my permissions and make sure I have read/write access? Thanks.",Fileservice,178
+I'm having an issue opening attachments in my email and it keeps showing an error. I've attached a screenshot so you can see exactly what's happening — hopefully that helps!,O365,337
+Good morning! I need to install a Sicalc update but it's asking for a password to proceed and I don't have it. Could someone please enter the password so I can get this installed? Thanks so much! — [NAME],Software,409
+"Hey, I was hoping to get access to the shared mailbox [EMAIL]. Could someone grant me permissions when you get a chance?",O365,308
+"Hey, my phone has gone completely silent — I'm not hearing any ringtones or notification sounds at all. I haven't changed any settings, so not sure what happened. Can you help?",Support general,462
+"Hi, I need a light external user account created for [NAME]. This is related to ticket [TICKET ID]. Just basic access for an external user should be all that's needed.",Support general,580
+"Hey, I need read and write access to a couple of shared folders on the J: drive — specifically J:[COMPANY]_[COMPANY] and J:IT-ILV, as well as the app22 share. Could someone grant me permissions? Thanks!",Fileservice,226
+"Hi, I need a basic user account set up for [NAME] with the username [USERNAME] at [COMPANY] in [LOCATION]. Could someone please get that created when you have a chance?",Support general,465
+"Hi, can you help with decommissioning [SERVER] from Nexthink? We need the system removed, IP reservations checked, and the network team notified to take down the firewall rules.",EOL,144
+"Hi there, I need to get access to the J:/REPOSITORIO folder, and I also need the DANFEview program installed on my machine. Could you help with both of those?",Fileservice,257
+"Hello, could you please grant me read/write access to J:/CE-STA/? If that folder doesn't exist yet, could you create it as well? Really appreciate the help!",Fileservice,248
+"Hi, I need a new printer driver installed on my machine. Could someone help me get that set up?",Computer-Services,51
+"Hello, I need a parallel printer installed — could someone help me get that set up? Let me know what you need from me.",Computer-Services,80
+"Hey, could you handle the decommission of [SERVER] from Nexthink? That includes removing the system, reviewing any IP reservations, and coordinating with the network team to get the firewall rules removed.",EOL,91
+"Hey, I'm having trouble with the shared scanner — it doesn't seem to be working right. Could someone come check it out?",Computer-Services,59
+"Hi, just a heads up that [NAME] from [COMPANY] at [LOCATION] will be leaving the company on 28/12/2017. Could you please take care of the offboarding on your end? Thanks!",Active Directory,45
+"Can you kick off the decommission process for [SERVER]? Needs to be removed from Nexthink, IP reservations checked, and the network team should be looped in to remove the firewall rules.",EOL,94
+I need some help getting a conference call set up. Could someone assist me with that when you get a chance?,O365,303
+"Hey, Skype just isn't working for me — I can't get it to open or connect at all. Can someone take a look?",O365,301
+I've completely forgotten my iPhone passcode and now I'm locked out — can someone help me get back in as soon as possible?,Support general,486
+"Hi, I've noticed I'm not receiving any emails from outside the company. I'm expecting some important messages from external contacts but nothing is coming through — can someone look into this?",Software,420
+I'm having a problem with the Zebra printer over in Basic Seed — it's not working right and I could really use some help getting it fixed. Could someone come take a look?,Computer-Services,88
+"[SERVER] is being taken offline and needs to be fully decommissioned. Can you remove it from Nexthink, sort out any remaining IP reservations, and let the network team know to remove the firewall rules?",EOL,102
+"Hi, I'm trying to access something but it looks like I don't have the right permissions. Could someone look into releasing access for me? Happy to provide more details if needed.",Fileservice,265
+"Hi there, could you please grant me read/write access to the J:/E-CAD folder? I need to be able to open and edit files in there. Thanks!",Fileservice,162
+"Hi there, I need some help with the Shakopee Employees distribution list — could someone look into this for me?",O365,323
+"Hello, could I please get read-only access to J:/FAQ BTR_HR? I just need to be able to look things up in there, no need to edit anything.",Fileservice,187
+"Good afternoon! I'd like to request a new email address be created for the ESH area to send out communications — something like [LOCATION]Comunica or [LOCATION]Brazil would work. It would need to be accessible from both my machine and [NAME]'s machine. Is that something that can be arranged? Thank you, [NAME]",O365,295
+"Hi, we have an employee who has left the company and I need their Windows and email accounts deleted, all system access revoked, and their hardware returned. Could you please handle the full offboarding process?",Active Directory,12
+Could you please install the Datalogger Extech program on my machine? I need it to get started with some work tasks.,Software,394
+"Hi, we have a third-party consultant who is being denied access to our systems and they need to get in to do their work. Could someone look into why their access isn't working and get it sorted out? Thanks.",Active Directory,35
+"Hi there, could you set me up with read-only access to the J:/ZR_MAS folder? I just need to be able to view the files in there, no need to edit anything. Thanks!",Fileservice,273
+"Hi, I'm hoping to get read-only access to a few folders on the J: drive — specifically J:/KALENDER, J:/Prüfprotokolle, and J:/Thermographie. I just need to be able to view the contents. Thanks in advance!",Fileservice,154
+"Hey, I need a mail alias set up for my account. Could someone take care of that for me when you have a moment?",O365,312
+"Could you grant me read/write access to J:/CE-STA/ please? Also, if that folder doesn't exist yet, could you create it? Thanks in advance!",Fileservice,168
+"Hi there, could you set up read/write access for me to J:/[NAME], J:/[SERVER], J:/Mailings, and J:/Mailingversand? Appreciate the help!",Fileservice,179
+"Hi, I'm trying to access the shared folder at //[COMPANY]ads.dir/[COMPANY]ein01-ems01/[LOCATION] but I don't have permissions. Could someone grant me read and write access? Thanks!",Fileservice,239
+"Hi there, we have a new team member starting and I need to get them set up with a Windows account, Exchange email, Skype, and access to the standard file shares. Could you help get that created?",Support general,557
+"Hi, this is being flagged by [COMPANY] at [LOCATION] — it looks like there's a vulnerable version of Office running on [SERVER] that needs to be addressed. Could someone look into getting this patched?",Support general,520
+"Hey, could you set me up with read/write access to the J:/GMO-DECLARATIONS_MA folder? I need to be able to view and edit files in there for my work. Thanks!",Fileservice,220
+"I'm having trouble with XFlow — when I go to code invoices, they're not showing up in the system. I can't get any work done without being able to see them, so hoping someone can fix this soon.",Software,432
+"Hi there, we're retiring [SERVER] and need the full decommission taken care of. Can you remove it from Nexthink, verify IP reservations are cleared, and flag the network team to remove any associated firewall rules?",EOL,93
+"Hi, could you help us get a general shared mailbox set up for our team in Employee Management? We need somewhere the whole team can send and receive emails from.",O365,300
+"Hi, I need help getting Contaction installed on my machine. Could someone from IT take care of that for me?",Software,413
+Could you please set up a Light user account for an external person? They'll just need email access and basic system access to get started. Thanks!,Support general,500
+"We're retiring [SERVER] and need it fully cleaned up — please remove it from Nexthink, check for any IP reservations, and make sure the network team removes the associated firewall rules.",EOL,107
+"Hi there, I need read/write access to N:/[SERVER]/STA-PGRO, including all the subfolders underneath it. Could you please set that up for me?",Fileservice,167
+I'm having trouble logging into [NAME] — it just won't let me in. Can someone take a look at what's going on?,Software,386
+"Hey, I need a user added to the server at [LOCATION] so they can access the Marketing resources there. Could you get that set up when you have a chance?",Support general,511
+"Please decommission [SERVER] from Nexthink — remove the system, double-check any IP reservations that might still be active, and notify the network team to remove the firewall rules associated with it.",EOL,143
+"Hi, I'd like to request a Light User account for an external user — this is related to [TICKET ID] and is for Everding, Florian. Could you get that set up when you get a chance?",Support general,437
+"Hello everyone, I'm running into a network access issue between two servers. From [IP_ADDRESS] there's no access to port 443 (HTTPS) on [IP_ADDRESS], though it works fine in the other direction. We have a geoprocessing web application that requires two-way communication over HTTPS between the app server and the geoprocessing server, so we really need traffic to flow both ways. Could you please enable access from [IP_ADDRESS] to port 443 on [IP_ADDRESS]? Thanks so much, [NAME]",Support general,558
+"Hi there, I need a few applications installed on my machine. Could someone reach out to get that sorted?",Software,397
+"Hey, I need read and write access to j:/ins-dv on the shared drive. Could someone set that up for me? Thanks!",Fileservice,234
+"Hey, I'm getting an error when I try to use the RFB website. Not sure what's causing it but I can't get it to load properly — could someone help?",Support general,541
+"Hey, we're shutting down [SERVER] and need the usual decom steps done — remove it from Nexthink, check the IP reservations, and ping the network team to clear out the firewall rules.",EOL,125
+"Hi, I was hoping to get permissions set up on the R drive — could someone take a look at that for me? Thanks.",Fileservice,147
+"Hi there, I need access to the ZET-PW folder on the J: drive. Could you grant me read and write permissions? Thanks!",Fileservice,237
+"Hi, I'm having trouble accessing my email inbox — I can't seem to get in. Could someone look into this for me? Thanks.",O365,348
+I'm locked out of Skype and can't log in at all — I've tried a few times but it just won't let me in. Can someone help me get back in ASAP?,O365,328
+"Hey, the Snipping Tool isn't working on my computer anymore and I use it pretty regularly. Could you reinstall it for me?",Software,425
+"Can you help wrap up the decommission of [SERVER]? The main things are getting it removed from Nexthink, clearing any IP reservations, and notifying the network team so they can remove the firewall rules on their side.",EOL,104
+"Hello, could you create a new folder on [SERVER] for us? Please let me know if you need any additional details about where exactly it should go or what permissions it needs.",Fileservice,267
+I'm having some issues with the label printer — it doesn't seem to be working properly. Could someone come take a look at it?,Computer-Services,50
+"Hey, I need a brand new Windows account set up for someone — they'll need an Exchange email, Skype, and access to the standard file shares. Can you help get that created?",Active Directory,11
+"Hi, could you give me read and write access to the J:/Topf- und Substratbestellungen folder on the J: drive? I need to be able to open and edit files in there. Thanks!",Fileservice,215
+"Hi, could you please set up a new Windows account for a new team member? They'll need email access through Exchange, Skype, and the standard file share access that everyone else has.",Support general,570
+The printer in the Building 6 Fishbowl isn't working. Can someone come check it out? A few of us are trying to use it and it's not responding.,Computer-Services,62
+I'm locked out of my account and can't log in at all — can someone please unlock it as soon as possible? I need to get back to work!,Active Directory,33
+"Hi, I'm having some issues with my cellular internet connection and could use some help getting it sorted out. Could someone take a look?",Support general,477
+"Could someone help decommission [SERVER] from Nexthink please? This includes removing the system entry, checking for any lingering IP reservations, and making sure the network team removes the firewall rules.",EOL,139
+"Hi, some of my emails seem to be missing in Outlook — I'm not sure where they've gone. Can someone help me figure out what happened to them?",O365,336
+"Hi there, my printer needs some adjustments — something isn't quite right with how it's set up. Could someone come take a look and get it sorted out?",Computer-Services,87
+"Hi, could you help me change the name of one of our Exchange meeting rooms? I need it updated to reflect the correct name.",O365,321
+"Hey, I need some software installed on my computer. Could someone from IT help me get it set up?",Software,406
+"Hi, I'm putting in a request to set up a basic user account for [USERNAME], that's [NAME] over at [COMPANY] in [LOCATION]. Could you get that created? Thanks!",Active Directory,44
+"Hey, Skype has stopped working on several of our computers here and we're not sure what happened. Can someone come take a look or let us know what to do?",O365,292
+"Hi there, could you please set up a new Windows user account for a new team member? They'll need email access through Exchange, Skype, and the standard file share permissions. Thanks!",Support general,452
+"Hi, could you please grant me read/write access to N:/[SERVER]/STA-LEM and all of its subfolders? I need full access to everything in there. Appreciate it!",Fileservice,244
+"Hi, I need a program installed on my computer so I can access the Itau account. Could someone help get that set up for me?",Software,393
+"Hi, my account at [LOCATION] has been locked and I can't get in. Can someone unlock it for me as soon as possible?",Software,403
+"Hey, I need to have a user account fully cancelled and all their access revoked as soon as possible. Could someone take care of that?",Active Directory,1
+"Hi, I need to request a change to a user's name and their associated email address. Could someone help process this update?",O365,354
+"Hi there, could you help me get a new user account set up? Please let me know if you need any additional details from me. Thanks!",Fileservice,202
+"Hey, could I get read and write access to J:/scan/canon/ningel on the file share? Thanks in advance.",Fileservice,231
+"Hi, I'm hoping to get read/write access to the GROUPS J:/MA-PRICING folder. Could someone sort out those permissions for me when possible? Thanks!",Fileservice,201
+"Hi, I need to request access to a file share — could someone help me get that set up? Please let me know if you need any additional details from me.",Fileservice,213
+"Hi, I need a program installed on my computer and also need the printer drivers updated. Could someone help me get both of those sorted out?",Computer-Services,84
+"Hi, this is [NAME], head of IT at SC-W — I need help with a shared folder access issue for Fernando. Please check the email in the journal for the full details. Thanks.",O365,356
+"The Brother BEE T01 printer is throwing an error — the display is showing messages about replacing parts and something about the drum. It's not printing at all, so could someone come take a look?",Computer-Services,57
+"Hey, I need Skype uninstalled and reinstalled on my computer — it's been acting up and I think a fresh install might fix it. Can someone help with that?",O365,324
+Hello! I need help getting a printer installed and also getting access to Discoverer. Could someone assist me with both of those? Thanks!,Computer-Services,83
+"Hi, I need a new Windows user account set up — they'll need Exchange email, Skype, and access to the standard file shares. Could you get that created for them?",Support general,444
+"Hi, requesting decommission of [SERVER] — needs to come out of Nexthink, IP reservations should be reviewed and cleaned up, and the network team should be asked to remove the firewall rules.",EOL,111
+"I'm having trouble opening PDF files — every time I try, nothing happens or I get an error. Can someone help me fix this?",Software,398
+"Hi, I need a Light user account created for an external contact — they'll just need email and basic system access. Please let me know if you need any additional details!",Support general,543
+"Hello [NAME], could you please set up the following users for [URL] emails the same way [NAME] was configured — so emails are delivered to the portal and the user gets a notification through Flow? I've attached a reference email. Let me know if you have any questions!",O365,306
+"Hi! I keep getting prompted to log in to OneDrive when I try to save changes to a file — it doesn't happen every single time, but it's pretty frequent. I thought I wouldn't need to keep signing in while I'm on my work computer connected to the network. Any help would be appreciated, thanks!",O365,335
+"Hello, we have a new starter who needs a Windows account set up with Exchange email, Skype, and the standard file share access. Could you get that created when you get a chance?",Support general,578
+"Hi, I need read/write access to J:/MarkerDB — I work with the Marker Database and currently can't get in. Could you please grant me the necessary permissions?",Fileservice,186
+"Hi, I'm trying to access the J: drive from my notebook but I can't get it to connect. Could someone help me get that set up?",Fileservice,165
+"Hey, could someone please install the Extech RHT10 software on my computer? I need it for work and don't have it yet.",Software,391
+"Hey, could you grant me access to the server at [URL]? I need to be able to create and edit temp files there. Let me know if you need anything else from me.",Fileservice,153
+"Hi, we need a Light User account set up for an external user — [USERNAME] / [NAME]. Could you get that created when you get a chance?",Support general,529
+"Hey, I think my printer driver needs to be updated — I've been having some issues and I think that might be the cause. Could someone help me get it updated?",Computer-Services,86
+"Hi, could you please update my email address to [EMAIL]? Thanks so much!",O365,369
+"Hi there, I need to get the scanner driver installed on the computer in the potting room. Could someone come by and take care of that when they get a chance?",Computer-Services,79
+"Hi, we received an NTT alert — it looks like there's a ping monitoring alert for [SERVER] related to cpe0013940 ([LOCATION]_ManuelOcampo) at [COMPANY] SE. Can someone investigate what's going on with [LOCATION] Monitor [LOCATION]_ManuelOcampo?",Support general,449
+"Olá, preciso que meu acesso seja liberado. Estou sem conseguir entrar no sistema. Podem me ajudar?",Active Directory,34
+"Hi there, I need to request access to a file share. Could someone help me get the right permissions set up? Thanks!",Fileservice,252
+"Hi, this is a request for an additional application [LOCATION] service related to ticket [TICKET ID] for [NAME] at [COMPANY], [LOCATION]. Please let me know if you need more details.",Support general,493
+"Hi there, I'm having an issue with Skype and need some help getting it working again.",O365,288
+"Hi there, [SERVER] is end-of-life and needs to be decommissioned. Can you remove it from Nexthink, verify any IP reservations are cleared, and notify the network team to remove the firewall rules?",EOL,108
+"Hi, I'm not able to access my email at all. Can someone please take a look?",O365,286
+"Hi, I'm having an issue with Skype and need some assistance. Could someone get back to me when they're available? Thanks.",O365,359
+"Hi, we have some high-level visitors and consultants coming in and they'll need wifi access. Could you provide the guest wifi password for them?",Support general,506
+"Hi team, just a heads-up that planned maintenance has been scheduled for [SERVER] at [LOCATION] on 2018-10-27 starting at 07:00. This will affect cpe0009469 ([COMPANY]) and cpe0013003 ([COMPANY]) as well as [COMPANY] SE. We need feedback on whether this timing works before we proceed.",Support general,516
+"Hi, could you please set up a Windows account and any additional services needed for [NAME]? They're with [COMPANY] based out of [LOCATION]. This is related to Order Request ID [TICKET ID].",Active Directory,3
+"Hi, I need a program installed on my computer. Can someone help get that taken care of?",Software,433
+"Hi, I need to request that the account for [NAME] [NAME] be blocked and cancelled. Could you please take care of that when you get a chance?",Active Directory,23
+"Hi, I need to reset my password — I can't get into my account. Can you help?",Active Directory,41
+Could you please create a Basis user account for [NAME] [NAME]? Their username should be [USERNAME] and they're with [COMPANY] at [LOCATION]. Let me know if you need anything else from me.,Support general,515
+"Hi team, just a heads-up that planned maintenance is scheduled for [SERVER][LOCATION] on 2018-10-04 at 10:00[LOCATION]. This affects cpe0009469 ([COMPANY]) and cpe0013003 ([LOCATION]_Kimberly) [COMPANY] SE. Please confirm once you've reviewed this and let us know if there are any issues.",Support general,573
+"Hi, we started seeing an Outlook error just today and I'm not sure what changed — multiple users at [LOCATION] and [LOCATION] are getting it whenever they click on a Skype conversation history or a missed Skype conversation notification. I've attached a screenshot of the error. Can someone look into this urgently since it's affecting a lot of people?",O365,355
+"Hi there, it looks like there's a GPO missing for [LOCATION] at [ADDRESS] — could someone take a look and get that sorted out?",Active Directory,47
+"Hey there, I have a cell phone that I need set up, but without email configured on it — can someone help me get that sorted?",Support general,438
+I'm having a really frustrating issue where files I'm trying to open from Outlook or the shared drive are taking 4 to 5 minutes to load. It's really slowing down my work — can someone help figure out what's causing this?,O365,297
+"Good morning! Could you please create a 'Stock Report' folder inside the Groups J drive under the Laboratory section, and grant access to everyone listed on this ticket? Really appreciate the help!",Fileservice,233
+"Hi, I need a standard (Basis) user account created for [NAME] with the username [USERNAME]. They're based at [LOCATION] and are part of [COMPANY]. Could you get that provisioned when you get a chance?",Support general,514
+"Hi there, could you please create some generic email addresses for the [LOCATION] Procurement team? Let me know if you need any more details from me.",O365,347
+I've got no internet connection at all right now — nothing is loading and I can't get any work done. Can someone help ASAP?,Support general,528
+"Hi, could you please remove my access from the file share I was previously set up on? I no longer need it. Thanks.",Fileservice,277
+"Could you please create a new Windows user account for a new starter? They'll need Exchange email, Skype, and the standard file share access set up.",Support general,534
+"Hi, I'm trying to set up the [LOCATION] Verify app on my phone but I can't get the QR code I need to activate it. When I go into my settings on the [COMPANY] Okta page, the Extra Verification section just says [LOCATION] Enabled — but my phone is still asking for a QR code to finish the setup. Can someone help me get that QR code? Thanks, [NAME]",Software,408
+"Hi there, could you create a light external account for someone we're bringing on temporarily? They'll just need email and basic system access. Thanks so much!",Support general,472
+"Hi there, could you please grant me read and write access to J:/ÖFZFOX/MOM-OSR? I need to be able to work with files in that folder. Thanks!",Fileservice,218
+"Hi, could you please set me up with access to LVS? I need it for my work but I'm not able to get in at the moment. Thanks!",Fileservice,195
+"Hi, I need SICALC updated on my machine — I think I'm running an older version. Could someone push through the latest update?",Software,404
+"Hi there, could someone help us customize the display names for our generic email addresses? We'd like them to show something more meaningful rather than the default name.",O365,332
+"Hi there, [SERVER] is being retired and I need help with the cleanup — specifically removing it from Nexthink, freeing up any IP reservations, and getting the network team to drop the firewall rules.",EOL,123
+Just flagging that OS updates need to be applied to [SERVER] at the LH location — can someone schedule or action that?,Support general,536
+"Hey, could you grant me read-only access to the J:/FAQ BTR_HR file share? I just need to be able to view the files in there. Thanks!",Fileservice,258
+"Hi, this is regarding ticket SR272002 — [NAME] at [COMPANY] has recently gotten married and needs their name updated in the system. The new name is [NAME]. Could you please make that change? Thanks!",Active Directory,37
+"Hey, could you please give me read/write access to both j:/azubi and j:/AZB Kaufleute on the J drive? I need to be able to work in both of those folders. Thanks!",Fileservice,276
+"Hi, I need Base Discovery enabled on my account or system. Could someone help get that turned on for me?",Software,387
+"Hi, I need some help with Skype for Business at [LOCATION] — could someone assist?",O365,343
+"Hey, I'm having trouble connecting to the network printer and can't figure out what's wrong. Could someone help me get it working?",Computer-Services,52
+"Hi, I need some help with the Okta mobile app. Can someone reach out to walk me through it?",Software,423
+"Hi there, can you handle the decommission of [SERVER] in Nexthink? We'll need the system removed, IP reservations checked, and the network team notified to take out the firewall rules on their end.",EOL,138
+"Hey, we're taking [SERVER] offline for good. Please go ahead and remove it from Nexthink, sort out any lingering IP reservations, and loop in the network team to get the firewall rules removed.",EOL,110
+I'm having trouble printing — every time I try to print something nothing happens. I'm not sure if it's the printer or my computer but I can't get anything to come out. Can someone help?,Computer-Services,81
+"Hi, could you please set up read/write access for me on the J: drive? I need access to a few specific folders — I can follow up with the exact folder names if needed. Thanks!",Fileservice,160
+"Hi there, can you please provision a Basis user account for [NAME]? The username should be [USERNAME] and they're with [COMPANY] located at [LOCATION]. Thanks!",Support general,521
+"Hi, could you please set up a new account for me? I just started and need to get access sorted out. Thanks!",Active Directory,0
+"Hey, just flagging that [SERVER] is due for decommission. Please remove it from Nexthink, confirm any IP reservations are addressed, and loop in the network team to get the firewall rules taken out.",EOL,101
+"Hi there, could you give me read-only access to the J:/FAQ BTR_HR folder on the network drive? I just need to be able to view the files in there. Thanks!",Fileservice,197
+"Hi, I have a computer-related issue involving [NAME] — could someone from IT reach out to help get this sorted? Thanks!",Computer-Services,85
+"Hi, I'm having trouble sending emails to [URL] — every time I try, it just fails. Can you look into what's blocking it?",O365,375
+"Hi, the Phone Work app at [LOCATION] keeps crashing and I think it might be a certificate issue. Could you issue a new certificate to get it working again?",Support general,461
+"Hi, I need a new user added to our Email User group. Could you help get them set up with access?",O365,327
+"Hey, we need the security tools updated on [SERVER] and the hard drive encryption removed from those systems as well. Could someone from IT take a look at that?",Support general,471
+"Hi, could you please install Adobe Acrobat DC Pro on my computer? I need the full version to work with some documents.",Software,399
+All my contacts have disappeared from my iPhone 5 — I have no idea where they went! Can someone help me get them back as soon as possible?,Support general,547
+"Hi, I can't access the shared mailbox [EMAIL] anymore — not sure what happened but I'm getting an error when I try to open it in Outlook. Reference: [LOCATION] --> [TICKET ID]",O365,315
+"Hey, could you please create a new Windows user account for someone starting soon? They'll need Exchange email, Skype, and standard file share access set up. Appreciate it!",Support general,554
+"Hi, I need to get the BlackBerry Work apps installed fresh on a device — could someone help with a new installation of those apps?",Support general,447
+"Hi, my VPN keeps disconnecting and I can't stay connected for more than a few minutes — can someone take a look at what's going on?",Support general,540
+"Hey, could you please create a new Organizational Unit called 'West' in Active Directory? Let me know if you need any additional details.",Active Directory,16
+"Hi, could you please create a new user account for me? Thanks so much for your help!",Fileservice,205
+"Hey, just flagging that there's been an alert about a vulnerable Intel component picked up at [COMPANY] [LOCATION] on [SERVER] — someone from [LOCATION] flagged this and it probably needs looking into.",Support general,436
+"We're shutting down [SERVER] permanently and need the full decommission done. Please remove it from Nexthink, take care of any IP reservations, and get the network team to remove the firewall rules on their end.",EOL,119
+"Hi, could someone help me update the Receira BX program on my computer? It looks like it needs an update but I'm not sure how to do it myself.",Software,405
+"Hi, I need to request that [NAME]'s user account and all associated access be cancelled. Please let me know once that's been taken care of.",Active Directory,9
+"Hi, I need some help reconfiguring my corporate phone — can someone walk me through the setup or do it remotely?",Support general,480
+"I can't see my Outlook Calendar — when I try to open it, nothing shows up. Can you help me get it back?",O365,287
+"Hi, could you help me get verified for everything? I need [NAME] to go through the verification process.",Software,390
+"Hey, I'm having some trouble with scanning — it doesn't seem to be working properly. Could someone take a look and help me figure out what's going on?",Computer-Services,78
+I've suddenly lost access to the [COMPANY] intranet. I think it might be because the Okta app isn't assigned to my account? I need to get back in as soon as possible.,Software,378
+"Hi, could you please set up a Light User account for an external user? The username should be [USERNAME] and the account is for [NAME]. Thanks!",Support general,439
+"We need to decommission [SERVER] from Nexthink — please remove the system, check whether there are any IP reservations tied to it, and ping the network team to clean up the firewall rules.",EOL,140
+"Hi, I need a new user account set up — could someone help get that process started? Please let me know what information you need from me and I'll send it right over. Thanks!",Fileservice,164
+"Hi, I'm having trouble with my Pushmail authentication — the [LOCATION] Verify push notification isn't working and I can't get logged in. Can someone help me fix this?",Software,417
+"We're taking [SERVER] offline for good. Could you handle removing it from Nexthink, sorting out any IP reservations, and coordinating with the network team on the firewall rules?",EOL,127
+"Hello, could I get read-only access to the following folders on the J: drive: J:/Arbeigtschutzunterweisungen, J:/Bioinf, J:/Biotic-Stress, and the J: drive root? I just need to view files in those locations. Thanks!",Fileservice,200
+"Hi, can you set up a Basic User account for [USERNAME] when you get a moment? Thanks!",Support general,535
+"Hi, I'm trying to sign into Skype for Business but it won't let me register — it just fails every time I try. Could someone help me get this sorted out?",O365,360
+"Hey, I need a new Windows account created for someone — they'll need Exchange email, Skype, and access to the standard shared drives. Let me know if you need any more details!",Support general,448
+"Hi team, we need to decommission [SERVER] — can you go ahead and remove it from Nexthink, check whether there are any IP reservations to clean up, and let the network team know to pull the firewall rules?",EOL,90
+"Hola, estoy teniendo problemas para conectarme a Skype. No me deja entrar y no sé qué está pasando. ¿Pueden ayudarme por favor?",O365,362
+"Hi, I need to get international roaming set up on my mobile. Could you help with enabling that? I'll be traveling soon and need it sorted before I leave.",Support general,455
+"Hi there, I need a Light user account created for an external person — they'll need email access and basic system access but nothing beyond that. Could you get that set up for them?",Support general,440
+"Hey, I'm having trouble accessing Skype — I can't get in at all. Can someone take a look?",O365,331
+"Hi, the protective film on my work phone is damaged and needs to be replaced — can someone arrange that for me?",Support general,490
+"Hey, I need to get registered with Okta and I'm not sure how to do it on my own. Could someone walk me through the new Okta registration process?",Software,431
+"Hi, could you please create a Basic User account for [USERNAME]? Thanks in advance.",Support general,532
+"Hello, we have a new apprentice, [NAME], who needs access to a shared folder on [SERVER]. Could you please set up the appropriate read/write permissions for them? Let me know if you need any additional details.",Fileservice,163
+"Hi there, I need a new Windows account created for a team member — they'll need email set up through Exchange, Skype, and access to the standard file shares. Please let me know if you need any additional details.",Support general,512
+"Hey, [SERVER] is being decommissioned — could you take it out of Nexthink, verify any IP reservations are cleared, and let the network team know to pull the associated firewall rules?",EOL,121
+"Hi, we need to retire [SERVER] — can you please remove it from Nexthink, check if there are any IP reservations that need to be cleared, and let the network team know to pull the firewall rules for it?",EOL,105
+"Hello, could you please create a new Windows user account? The person will need Exchange email, Skype, and the usual file share access set up as well.",Support general,445
+"Hey, could someone add a label printer for me? I need it installed so I can start printing labels — let me know if you need any more details.",Computer-Services,70
+"Hi, I need some help getting a few work applications installed on my mobile phone. Is there someone who can walk me through it or do it for me?",Support general,579
+"Hello, we have a new person starting and they'll need a full Windows account set up with Exchange email, Skype, and the standard file share access. Could you get that sorted when you get a chance? Thanks!",Support general,544
+"Hi, could you please create a new user account for someone who's joining us? Let me know if you need any details from me to get it set up.",Support general,545
+This was flagged by [COMPANY] [LOCATION] — there's a vulnerable [LOCATION] on [SERVER] that needs to be looked into.,Support general,484
+"Hey, I'm having an issue with Skype — can someone please take a look and help me out?",O365,361
+Just flagging that the site-to-site VPN link appears to be down again — can someone investigate the connectivity issue urgently? We're having trouble reaching the other site.,Support general,505
+"Hi, following up on our conversation — I'm still getting that error message in Outlook when trying to forward emails. Could you help get that resolved?",O365,311
+"Heads up — emergency maintenance has been scheduled on [SERVER] at [LOCATION] for 2018-08-31 at 02:00 [LOCATION], affecting cpe0004630 ([LOCATION]_Balcarce), cpe0007405 ([LOCATION]_SaoPaulo), and cpe0008460 ([LOCATION]_PatosDeMinas) for [COMPANY] SE. Feedback on this is required — please respond when you can.",Support general,460
+"Hi, could you please give me read/write access to J:/[USERNAME]? I need to be able to read and save files in that folder. Thanks!",Fileservice,251
+"Hey team, [SERVER] needs to come down — can you handle removing it from Nexthink, checking any IP reservations associated with it, and getting word to the network team to drop the firewall rules?",EOL,98
+"Hi, I need to get a new email address set up. Could someone help me with that?",Active Directory,40
+"Hi, I'd like to request a Light external user account to be created — they just need basic system access and an email. Please let me know if you need any additional details.",Support general,453
+"Hi team, just a heads up that [NAME] (external, based at [LOCATION]) is leaving and their access will need to be removed. This is in reference to ticket [TICKET ID]. Please let me know if you need anything else from me.",Support general,546
+"Hi there, I'm trying to access the Z folder (Obers) but I don't seem to have permissions. Could you get me access to that? Thanks.",Fileservice,227
+"Hi, could you please set up R drive access for one of our team members? They need to be able to get into it for their work but currently don't have permissions.",Fileservice,210
+"Hi there, this is a follow-up on ticket [TICKET ID] — the order has been provisioned and I wanted to make sure the install for [NAME] is being scheduled and moving forward. Please let me know the status!",Support general,478
+"Hi there, I need another new Windows user account created with the usual setup — Exchange email, Skype, and standard file share access. Let me know if you need any additional details.",Support general,565
+"Hi, I'm reaching out on behalf of Santiago [NAME] — he's not able to log in to Office 365 and needs access restored as soon as possible. Can you help?",O365,291
+"Hi, [SERVER] is end-of-life and ready to be decommissioned. Please remove it from Nexthink, check for any lingering IP reservations, and give the network team a heads-up to remove the firewall rules.",EOL,128
+"Hi, I need access to our team email account in Outlook but I can't seem to get it to show up. Could someone help me get that set up?",O365,329
+"We're ready to fully retire [SERVER] — please remove it from Nexthink, clear any IP reservations associated with it, and coordinate with the network team to get the firewall rules removed.",EOL,130
+"Hi, I need access to a shared mailbox please. Could someone help get that set up for me when you get a chance? Thanks!",O365,372
+"Hi, could you please deactivate the following email address: [EMAIL]? The account is no longer needed and should be disabled. Thanks!",Active Directory,29
+"Hello, could you please create a new folder for me on the J: drive? The folder should be set up under [SE. Let me know if you need anything else from me to get that done.",Fileservice,228
+"Hi, could you please add a new member to the [COMPANY] Leadership Team email distribution list? Let me know if you need any additional details.",O365,341
+"Hey, I need a program installed on my computer. Can someone help get that taken care of?",Software,402
+"Hello, I need read/write access to N:/[SERVER]/STA-CAM, including all subfolders underneath it. Could you set that up for me? Thanks!",Fileservice,243
+"Hi there, could you please set up a new Windows account for a new team member? They'll need email access through Exchange, Skype, and the standard file share access that everyone else has. Thanks!",Support general,542
+The data recording software still isn't working and this is an ongoing issue. I still need an admin to log in to get this resolved — can someone please follow up on this?,Software,428
+"Hey, could you take care of decommissioning [SERVER] from Nexthink? That includes removing the system, checking on any IP reservations, and getting the network team to remove the associated firewall rules.",EOL,136
+"Hi there, please decommission [SERVER] — it needs to be removed from Nexthink, any IP reservations should be checked and released, and the network team should be notified to remove the firewall rules.",EOL,118
+I can't seem to print to the new copier in KIM — whenever I try to send a print job nothing happens. Can someone help me get it set up on my computer?,Computer-Services,53
+"Hey, we're having trouble with the internet connection at [COMPANY]. It doesn't seem to be working — can someone check on this?",Support general,454
+"Hey, could you set me up with read/write access to the [SERVER]-RW file share? I need to be able to read and edit files on there. Thanks!",Fileservice,282
+"Hey, OneDrive keeps asking me to sign in over and over again and it's really slowing me down — I can't get to any of the documents I'm trying to work on. Can you help get this sorted out?",O365,285
+We're sunsetting [SERVER] and need it removed from Nexthink. Could you check the IP reservations as well and let the network team know to clear out the firewall rules? Thanks.,EOL,145
+"Hi, I need my Okta Verify reset — I'm not able to authenticate right now and I'm locked out of everything. Please help!",Software,380
+"Hello, I also need read/write access to J:/ÖFZFOX/MOM-OSR please — could you set that up for me so I can view and edit files in that folder? Thanks!",Fileservice,223
+Skype for Business isn't working on my computer — I can't connect or use it at all. Please help!,O365,293
+"Hi, could someone create a [LOCATION] entry for [COMPANY].ads.dir with the A record pointing to [IP_ADDRESS]? Thanks!",Support general,494
+"Hi, I need a user to be added so they can receive emails coming in from nfe. Could you get that set up please?",O365,313
+"Hi, I'm having some kind of problem with Skype and could use some help getting it sorted out. Can someone reach out to me?",O365,351
+"Hi, we're looking to fully decommission [SERVER] — please remove it from Nexthink, check on any IP reservations that might still be active, and make sure the network team knows to remove the relevant firewall rules.",EOL,96
+"Hi, could you please grant me read/write access to N:/[SERVER]/STA-LEM, N:/[SERVER]/STA-CAM, and N:/[SERVER]/STA-[LOCATION]? Thanks!",Fileservice,172
+Skype isn't working for me — I can't access it at all no matter what I try. Can someone look into this?,O365,310
+"Hi there, could you please grant me read and write access to both J:/Stundenbuecher and J:/WST-ALLG? I need to be able to open and save files in both of those folders. Thanks so much!",Fileservice,222
+"Hello, we need a new Windows user account created with Exchange email, Skype, and access to the standard file shares. Could you get this set up for us?",Support general,568
+"Hi, the [SERVER] seems to be malfunctioning. Can someone take a look at it as soon as possible?",Computer-Services,64
+"We need to decommission [SERVER]. Please remove it from Nexthink, check for any IP reservations that need to be released, and notify the network team to remove the firewall rules on their end.",EOL,122
+"Hi team, we have an employee who is leaving the company and I need their account cancelled and all access revoked. Please let me know if you need any details to get this processed.",Active Directory,21
+"Hey, I went to use the Analysis Tool today and it seems to be missing — I can't find it anywhere. Could someone help me figure out where it went or get it restored?",O365,357
+"Hello, I'd like to put in a request for a new user account. Could someone get that started for me? Let me know if you need anything else from my end!",Fileservice,204
+"Hi, could you please make a reservation at [LOCATION] for the time clock device? The MAC address is [MAC_ADDRESS]. I'm not 100% sure of the IP — it's either [IP_ADDRESS] or [IP_ADDRESS], sorry about that!",Support general,507
+"Hi, I'm seeing a fuser error on [SERVER] and it's not printing at all. Can someone come take a look? It seems like a hardware issue.",Computer-Services,68
+"Hi, could you please set up a Basis user account for [USERNAME]? Let me know if you need any additional information to get this done. Thanks!",Support general,548
+"Hi, we're retiring [SERVER] and need it fully removed from Nexthink. Can you also check if there are any IP reservations tied to it and loop in the network team to clean up the firewall rules?",EOL,120
+"Hey, [SERVER] is being decommissioned. Could you take care of removing it from Nexthink, check on any IP reservations tied to it, and give the network team a heads-up to remove the firewall rules?",EOL,106
+"Hi, [NAME]'s account is locked and he's been out traveling for yield trial harvest. He'll be back on the 5th at 7 AM local time and needs his account reset so he can get back to work. Could someone please call him to sort it out? His numbers are [PHONE] or you can reach him at [NAME] extension [PHONE]. Thanks!",Software,416
+"Can you kick off the decommission process for [SERVER]? That means pulling it from Nexthink, checking on any reserved IPs, and having the network team remove the firewall rules when you get a chance.",EOL,124
+"Hi there, could you set up a new Windows account for a new team member? They'll need Exchange email, Skype, and the standard file share access, same as everyone else.",Support general,538
+The site-to-site VPN link is down and we can't get connectivity between locations. This is pretty urgent — can someone take a look right away?,Support general,509
+"Hi, just sending a reminder about a support ticket that was paused — it was originally raised by [COMPANY] [LOCATION] regarding a vulnerability at [LOCATION] on [SERVER]. Could someone pick this back up and provide an update?",Support general,463
+"Hello, I need a Light (external) user account created with email access and basic system permissions. Could you get that set up for me? Let me know what information you need.",Active Directory,24
+"Hey, I'm having trouble getting my work email on my cell phone — it's not working properly and I'm not sure what's going on. Could someone help me figure out what's wrong and get it sorted?",Support general,566
+"Hello, I need a new Windows account set up for someone on my team. They'll need email through Exchange, Skype, and access to the standard shared drives. Thanks!",Support general,519
+"Hi there, could someone please install Microsoft Teams on my computer? I need it to connect with my team and I don't have it yet.",Software,424
+"Hi there, I need to have a system deleted and fully removed. Could someone handle this when possible? Happy to provide more details if needed.",Active Directory,27
+"Hello, could you please create a new Windows user account with Exchange email, Skype, and standard file share access? We need to get someone onboarded. Thanks!",Support general,564
+"Hi, can you please process the decommission for [SERVER]? That means removing it from Nexthink, checking for any IP reservations to release, and notifying the network team to clean up the firewall rules.",EOL,100
+"Hi, please go ahead and decommission [SERVER] from Nexthink. Also make sure any IP reservations tied to it are cleaned up and that the network team is notified to remove the firewall rules.",EOL,126
+"Hi, I need the BarTender program installed on my computer. Once it's done, could you let me know when it's ready? I need to confirm it's working before I can get back to work. Thanks!",Software,415
+"Hey, could you set up a new Windows user account? They need Exchange email, Skype, and the standard file share access. Let me know if you need any more info to get started.",Support general,517
+"Hi, I need some help getting equipment activated at [LOCATION] — the device is [SERVER]. Could someone assist with the activation process?",Support general,474
+Good morning! I was hoping someone could help me get the SHARP printer installed on my laptop. Thanks in advance!,Computer-Services,76
+"Hi, I'm having an issue with Skype and need some help getting it working again. Can someone take a look?",O365,318
+"Hi, is it possible to have attachments automatically removed or stripped from emails that come in from external senders? I'd like to get that set up if we can.",O365,290
+"Hi, I need to request login access for [LOCATION] — could someone please help me get that set up?",Fileservice,180
+"Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.",Support general,577
+"Hey, could you create a new Windows user account for a new starter? They'll need Exchange email, Skype, and standard file share access set up. Appreciate it!",Support general,522
+Could you please create a Light (external) user account for a new external contact? They'll just need basic email and system access to get started.,Support general,539
+"Hi there, could someone help me get a printer installed on my computer? I'm not able to add it on my own and I need it set up to get my work done.",Computer-Services,69
+"Hey, I need some adjustments made to the shared mailbox [SERVER]. Could someone help me get that updated? Thanks.",O365,346
+"Hi, could you give me read/write access to j:/[NAME] on the J: drive? Thanks!",Fileservice,177
+"Hello, we have another new starter coming on board and they'll need a full Windows account set up with Exchange email, Skype, and the usual file share access. Let me know if you need anything else from me.",Support general,469
+"Hi, there's a shared Excel file called Protoplast_Exp_Plan_2018 that keeps saying I ([NAME]) have it open, but I really don't — it's been closed on my end. Because of this, no one else can edit the document. Could you please fix this? Thanks so much.",O365,349
+"Hi, I need a Basis user account set up for [USERNAME]. Could someone take care of that when they get a chance?",Support general,485
+"Hey, Skype for Business has been really hit or miss for me lately — sometimes it works fine and other times it's super slow or drops out entirely. It's been pretty disruptive. Can someone look into what might be causing it?",O365,374
+"Hello, could you set up a Light external user account with email and basic system access? It's for someone who works outside our organization. Thanks in advance!",Support general,513
+"Hey, I need help getting the profile configured for [NAME] — could someone take a look and make sure everything is set up correctly on their account?",Active Directory,19
+"Hi, could you please set up a Light external user account for someone outside the company? They just need email access and the basic system access that comes with that type of account. Thanks!",Support general,510
+"Hi, I need read and write access to the J:/LTR folder on the shared drive. Could someone sort that out for me? Thanks!",Fileservice,229
+"Hi, I need Visio installed on my computer. Could someone help get that set up for me?",O365,307
+"Hi, we need to decommission [SERVER] — can you remove it from Nexthink, check if there are any IP reservations that need to be cleared, and let the network team know to pull the firewall rules for it? Thanks.",EOL,135
+"Hi, I need a basic user account set up for [USERNAME]. Just the standard access should be fine, nothing special.",Support general,572
+"Hi there, I need to get a new user registered and some equipment purchased for them at [LOCATION]13494 — this is for [NAME]. Let me know if you need any additional details.",Active Directory,2
+Good morning! I'm having a problem with the printer at [LOCATION] — it's not showing up as available on my machine and I can't print anything. Could someone help me get it back online?,Computer-Services,58
+"Hey, Outlook isn't working for me at all today — I can't open it or send any emails. Can someone help me get it back up?",O365,316
+"Hey, I need a DNS entry created for [LOCATION] — specifically for [SERVER]m.[COMPANY]up.ads.dir. Could you get that added when you have a chance?",Support general,562
+"Hi, I'd like to request access to a file share. Could someone reach out to me to get the details sorted? Thanks.",Fileservice,170
+"Hey, could you grant me read and write access to the J:/CDC-C file share? I need to be able to open and save files there for my work. Thanks!",Fileservice,148
+"Hi, submitting a request on behalf of [NAME] from [COMPANY] based at [LOCATION]. Reference ticket [TICKET ID]. Please let me know if you need any additional details.",Support general,499
+"Hi, I'm putting in a request regarding a computer at BD[LOCATION] — could someone look into this and get back to me with next steps? Thanks.",Fileservice,224
+"Hi, could you help me get a new user account set up? Please let me know if you need any additional information from me. Thanks!",Fileservice,249
+"Hey, could someone help me get a printer installed on my computer? I'm not sure how to do it myself. Thanks!",Computer-Services,48
+"Hi there, I'm getting an alert saying the site-to-site VPN link is down — can someone investigate the network connectivity as soon as possible? This could be affecting a lot of people.",Support general,483
+"Hi there, we need to cancel a user's account and make sure all their access is revoked. Please let me know what information you need from me to get this done.",Active Directory,32
+"Hi, [NAME] is having an issue with the R drive — when she goes to R:/Research/18 Data/18APH/2018APH and tries to copy a folder and rename it to the next date, she gets an error and can't rename it. When she tries to delete the copied folder she gets another error too. The strange thing is no one else seems to have this problem, just her — could someone take a look at her permissions?",Fileservice,275
+"Hello, I need the [LOCATION] (Federal Revenue) program installed on my computer. Could someone please help with that?",Software,414
+"Hi, could you please set up a Light (external) user account for someone who needs email access and basic system access? Thanks in advance!",Support general,555
+"Hi, please could you create a Basis user account for [NAME] ([USERNAME])? They're with [COMPANY] and are based at [LOCATION]. Let me know if you need anything else!",Support general,550
+"Hey, can you kick off the decommission for [SERVER]? That means removing it from Nexthink, checking if any IP reservations are still active, and letting the network team know to remove the firewall rules.",EOL,114
+"Hi, I'm having a problem with my computer — it's not turning on at all. I press the power button and nothing happens. Can someone come take a look as soon as possible?",Support general,518
+"Hi, could I get a DHCP reservation made? The device at [LOCATION] with MAC address [MAC_ADDRESS] is a printer and it needs a fixed IP.",Support general,446
+"Hey, it looks like a group that should be in Active Directory is missing — I can't find it anywhere when I search. Could someone check on this and add it back if it was removed by mistake?",Active Directory,25
+"Hello, we have a new starter who needs a user account set up. Could you please get them created in the system when you have a moment?",Fileservice,219
+"Hi, I'm having a frustrating issue with Outlook — I installed the plugin in Spanish and now every time I open it, it crashes after just a couple of seconds. I keep seeing this error info: LCID:3082 skulcid:1033. I really need this fixed as I can't use Outlook at all right now. Looking forward to hearing from you. Thanks, [NAME]",O365,367
+"Hey, I need read/write access to J:/[COMPANY]/IT. Could someone get that set up for me? Thanks.",Fileservice,173
+"Hey, I need some help with my system configuration. Could someone reach out to assist me with getting things set up properly?",Software,418
+"Hi, [NAME] is telling me they can't log into my computer at all — they just get blocked every time they try. Could someone take a look and get that access sorted out?",Active Directory,4
+Urgent — we're getting an alert that the site-to-site VPN link has gone down. Can someone look into the network connectivity right away? This is affecting access on our end.,Support general,584
+"Hi, I'm having an issue with Skype meeting invitations — could someone take a look and help me get that sorted out?",O365,342
+I keep getting a printing error whenever I try to send something to the printer. It just won't go through — can you help?,Computer-Services,63
+"Hi, I'd like to request a basic user account be created for [USERNAME]. Could someone take care of that when possible? Thanks.",Support general,470
+"Hi there, I need access to a folder at N:/MA55/ — I don't think it exists yet, so could you create it and give me read/write permissions? Thanks so much!",Fileservice,247
+"Hi, I need a new Windows user account set up for someone, including an Exchange email, Skype, and the standard file share access. Could you get that going when you have a chance?",Active Directory,8
+"Hi, I keep getting a supplier error and I'm not sure what's causing it. Can someone take a look and help me figure out what's going wrong?",Software,395
+"Hi, I've noticed that when I send emails from the GTC-TR shared mailbox, they're showing up in my personal Sent Items folder instead of the GTC-TR Sent Items. Is there a way to fix this so sent emails stay in the right mailbox?",O365,333
+The printer has a paper jam and I can't clear it. I tried following the usual steps but it's still stuck — could someone come take a look?,Computer-Services,66
+"Hi, I need to get a new Windows account set up for someone — they'll need email through Exchange, Skype, and access to the standard file shares. Could you help get all of that provisioned?",Active Directory,15
+"Hello, could you give me read-only access to the J:/FAQ BTR_HR folder? I just need to look things up in there and won't need to edit anything. Thanks!",Fileservice,156
+"Hello, could you please grant me read/write access to the L:/MF file share? I need to be able to save and edit files there. Thank you!",Fileservice,260
+"Hello, could you give me read-only access to J:/FW-B? I just need to be able to view files in that folder. Thanks!",Fileservice,280
+"Hi, I have a question about email encryption and need some help understanding how to set it up or use it. Can someone assist?",O365,296
+"Hi, I need a new Windows account set up for a new team member. Please include Exchange email, Skype, and access to the standard file shares when you get a chance.",Support general,504
+"Hey, I need read/write access to J:/CE-STA/ please. Also, if that folder doesn't exist yet, could you create it as well? Appreciate the help!",Fileservice,158
+"Hi, I'm working with some Access queries and I need delete permissions on the J:/INS-ZR drive so I can append queries properly — right now it's blocking me because I can't delete the existing files first. Could you update my permissions? Thanks!",Fileservice,268
+"Hi, we're ready to decommission [SERVER]. Please remove the system from Nexthink, review any IP reservations, and coordinate with the network team to get the firewall rules taken down.",EOL,115
+"Hi, I need read/write access to a few folders on the J: drive — specifically J:/GE-SB, J:/MolTec, and J:/Geldokumentation. Could you set that up for me when you get a chance?",Fileservice,169
+"Hi there, I need help with the BarTender app — could someone assist me with getting it installed or set up on my machine?",Software,407
+I'm getting a Proxy Error when trying to browse — pages just won't load and I keep hitting the same error. Can someone help me fix this?,Support general,533
+"Hi, could you please grant VPN access with a software token for [NAME]? Let me know if you need any additional details.",Support general,488
+"Hello, I need read/write access to the J:/RISK-MANAGEMENT (GGR-RIM) file share. Could you get that set up for me when you get a chance? Thanks.",Fileservice,271
+"Hi there, could you please set up a new Windows user account? They'll need Exchange email, Skype, and the standard file share permissions. Thanks!",Support general,582
+"Hi, could someone come by and reinstall the scanner? It's not being recognized anymore and I need it up and running as soon as possible.",Computer-Services,60
+"Hey, could you set up a basic user account for Birgit with the username [USERNAME] at [COMPANY] in [LOCATION]? Thanks in advance!",Support general,466
+"Hello, could I please get read and write access to J:/[COMPANY]/HR on the file share? Let me know if you need anything else. Thanks!",Fileservice,236
+"We're retiring [SERVER] and need it fully decommissioned from Nexthink. Please remove it from the system, verify any IP reservations are cleaned up, and coordinate with the network team to drop the firewall rules.",EOL,137
+I'm trying to register through Okta but it's just not working — I keep getting stuck and can't complete the process. Can someone help me get this set up?,Software,427
+"Hey, I'm having an issue with the BlackBerry Work app on my phone — can someone take a look and help me get it working again?",Support general,489
+"Hi, I need read/write access to a few folders on the N: drive — specifically N:/[SERVER]/STA-LEM, N:/[SERVER]/[USERNAME], and N:/[SERVER]/STA-P. Could you help get those permissions set up for me? Thanks!",Fileservice,199
+"Hey, I need read/write access to a few folders on the J: drive — specifically J:/INS-ZR, J:/INS-ZRMO, J:/INS-ZRRP, and J:/ZR_MAS. Could you set that up for me please?",Fileservice,241
+"Good morning! We're having a weird issue with PDF files — on my end they show up fine with the .pdf extension, but when I send them to other people they're showing up as .dll files and no one can open them. Not sure what's going on but it's affecting multiple people I've shared files with.",Software,392
+"Hi there, I'd like to request a new user account to be set up. Could someone get that process started? Happy to provide any details you need.",Support general,459
+"Hi, [NAME]'s AD account keeps getting disabled and it's becoming a real problem — they're getting locked out repeatedly and can't get any work done. Could someone look into why this keeps happening and fix it?",Active Directory,13
+Heads up — it looks like the site-to-site VPN link has gone down. We're losing connectivity between sites and it needs to be looked into as soon as possible.,Support general,502
+"Hi, I'm reaching out about a phone repair issue for the [LOCATION] Ferrari account — could someone please look into getting this fixed?",Support general,443
+"Hi, I need help getting the T18 update applied to my computer. Can someone take care of that when they get a chance?",Software,430
+"Good afternoon, could you please create a shared network folder that everyone can access for storing invoice protocols sent to accounting for posting? I'd need [NAME] and [NAME] (see phone numbers: [PHONE] and [PHONE]) to have full read/write access for data entry, while all other users should have read-only access for consultation. I already have the file ready to put in there but it's too large to attach here. Please let me know once it's set up. Thanks, [NAME]",Fileservice,261
+"Hi there, could someone help me get a scanner installed? I need it set up on my computer but I'm not sure how to do it myself.",Computer-Services,72
+"Hi team, just a heads up that there are pending updates for [SERVER] in LightHouse that need to be applied — can someone take a look and get those pushed through?",Support general,442
+"Hello, we have a new team member joining and they're going to need a user account created. Could you please get that set up for them when you get a chance?",Fileservice,216
+"Hey, could you help me get a new email list set up? Please let me know what information you need from me.",O365,376
+"Hi, this is to let you know that [NAME] from [COMPANY] at [LOCATION] has left the organization — this is linked to ticket [TICKET ID] at [ADDRESS]. Could you please process the account offboarding? Thanks.",Support general,458
+"Hi, this is a follow-up to ticket TCK85637 regarding my file access — it looks like the issue wasn't fully resolved and I'm still having problems. Could someone please take another look?",Fileservice,194
+"Hi, could you please give me read-only access to the file share at j:/PDW/TargetDB/? I need to be able to view the files there but don't need to make any changes. Thanks!",Fileservice,150
+"Hey, I'm trying to update the inventory in Access but I can't delete a file that's in the way — it just won't let me remove it. Can someone help me get that sorted so I can make my changes?",Support general,481
+"Hey, I'm having trouble getting access to something and need help. Could someone look into this for me?",Active Directory,46
+"Hey, I went to log into Citrix and it's saying my credentials are missing — I can't get in at all. Can you help me get this fixed?",Software,388
+"Hey, I need read/write access to J:/MA-BD — I can see the folder but can't open or edit anything in it. Can someone sort out my permissions?",Fileservice,185
+"Could you help decommission [SERVER]? It needs to be removed from Nexthink, any IP reservations should be checked and cleaned up, and the network team will need to be notified to drop the firewall rules.",EOL,109
+"Hi there, I need a new user account set up please. Could someone help get that arranged? Thanks!",Fileservice,279
+"Hello, could you please set up read/write access to [SERVER]-FINANCE-RW for me? I need to be able to view and edit files there for my work. Thanks!",Fileservice,284
+"Hey, could you set up a light external account for someone we work with outside the company? They just need email and basic access to get going. Thanks!",Support general,476
+I'm running into problems with both Skype and OneNote — neither one seems to be working properly right now. Could someone take a look at both?,O365,289
+I've been having a bunch of problems with Outlook lately and it's making it hard to get my work done. Could someone reach out to help me figure out what's going on?,O365,294
+I'm getting a printing error and can't seem to get anything to print. I've tried a couple of times but it keeps failing — could someone help me figure out what's going on?,Computer-Services,65
+"Hi, we'd like to request a new O365 service account for our printers so they can scan to email. Feel free to update this ticket with any changes needed on the printer side too, like SMTP server, DNS server, SSL settings, or the email address being used.",O365,330
+"Hi, I'd like to request a new user account to be set up please. Could someone help get that sorted? Thanks!",Fileservice,246
+"Hi, could you please set up a new mailbox for me with a couple of alias email addresses attached to it? Let me know if you need any additional details.",O365,304
+"Hi there, I need access to some folders on the server but I'm currently unable to open them. Could someone help me get the right permissions set up? Please let me know what info you need from me.",Fileservice,155
+"Hi, I'm having a certificate issue related to [NAME] and need some help getting it sorted out.",Software,381
+"Hi, could you please give me read/write access to the j:/ins-dv file share? I need to be able to create and edit files in that location. Thanks in advance!",Fileservice,262
+"Hey, I need to install the software for my Wi-Fi receiver but I don't have the permissions to do it myself. Could someone help me get that installed?",Software,410
+"Hi, I'm following up on ticket [TICKET ID] regarding a Citrix issue for [NAME] at [COMPANY] Inc. in [LOCATION]. Could someone please assist or provide an update?",Software,434
+"Hello, could you please create a Light external user account for someone who needs basic system access and email? Let me know if you need any further details to get this set up.",Support general,464
+"Hi there, could I get read/write access to the J:/Topf- und Substratbestellungen folder on the network drive? I need to be able to add and edit files in there. Thanks!",Fileservice,207
+"Hi, whenever I try to open a PDF file it keeps opening in WordPad instead of a PDF reader, and I can't read it properly at all. Can someone help me fix this so my PDFs open correctly?",Software,419
+"Hey, could I get read/write access to a few folders on the J: drive? I need access to j:/MAZ-MATE, j:/MAZ-MB, j:/MBCALC, j:/MBDATA, and j:/Transfer. Thanks!",Fileservice,166
+"Hey, I need to request access to [LOCATION] for our IT team — the site address is [ADDRESS], Americas region. Could someone get that set up?",Active Directory,5
+"Hi there, I'm having trouble accessing some systems — it looks like my access may have been restricted or blocked. Could you look into releasing it for me? I need to get back in as soon as possible.",Active Directory,17
+"Hi, I've noticed that some folders I was expecting to see on my J: drive are missing — they're just not showing up anymore. Could you take a look and see what happened? I need access to them for my work.",Fileservice,253
+"Hi, could you please create a Basis User account for [USERNAME]? Let me know if you need any additional information to get this set up.",Support general,567
+"Hi, I'm running into some issues with the Teams and Skype integration and wanted to check if someone could look into it. For example, if I'm online in Teams but a colleague is only showing as online in Skype (not Teams), I can't reach them by chat or call at all — is that expected behavior, or is something misconfigured? Thanks, [NAME] — [PHONE] / [PHONE] | [EMAIL]",O365,340
+"Heads up — it looks like the site-to-site VPN link is down and we've lost connectivity. This is pretty urgent, can someone investigate and get it back up as soon as possible?",Support general,475
+"Hey, could you give me read/write access to the [SERVER]-[SERVER] file share? I need to be able to access and edit files there. Thanks!",Fileservice,245
+"Hey, I need read/write access to two folders on the J: drive — J:/[COMPANY] SB International and J:/ALS coordination. Could you sort that out for me? Thanks!",Fileservice,250
+"Hi there, we have a new person starting and they'll need a user account set up. Could you help get that sorted out for them?",Fileservice,211
+"Hi, I'd like to request access to a file share but I'm not sure who to ask. Could someone get in touch with me to sort out the details and get me the access I need? Thanks!",Fileservice,157
+"Hi, I need to get a user account set up to mirror another existing user's permissions and access — basically make it match exactly. Can you help with that?",Active Directory,26
+"Hi, we need help setting up the [COMPANY] calendar on a personal/private notebook. The person responsible for this is [NAME] — please reach out to them directly if you need any additional information.",O365,344
+"Hi there, I need to get access to MS Teams but I'm not able to get in. Could someone help set that up for me? Thanks!",O365,371
+"Hi, just flagging that there's a vulnerability alert that was initiated by [COMPANY] [LOCATION] on [SERVER] at [LOCATION]. Could someone look into this as soon as possible?",Support general,451
+"Hi, I need [SERVER] decommissioned. Can you remove it from Nexthink, double-check any IP reservations that might still be active, and reach out to the network team to take down the firewall rules?",EOL,131
+"Hey, I just got a new computer and need help getting it set up. Can someone assist?",Active Directory,31
+"[SERVER] is being decommissioned — please remove it from Nexthink, check for any lingering IP reservations, and notify the network team so they can take care of the firewall rules on their end.",EOL,92
+"Hey, I'm having trouble logging into Skype — I keep running into an error when I try to sign in. I've attached a screenshot showing what I'm seeing.",O365,339
+"Hey, could you please grant me read/write access to J:/Scan? I need to be able to save files there but I'm getting a permissions error when I try.",Fileservice,189
+"Hey, could someone help me get a piece of software installed? I'll share the details when someone reaches out.",Software,382
+"Hi, I need Skype activated on the profile for [NAME] — it doesn't seem to be enabled yet. Could you get that sorted out?",O365,326
+"Hi there, I'd like to request a new user account to be created. Could someone help get that set up? Please let me know if you need any additional details from me.",Fileservice,149
+Could you please give me read/write access to L:/CS? I need to be able to open and save files there for my work.,Fileservice,183
+"Hi, I need read and write access to the J:/INS-VW file share please. Could you get that set up for me when you get a chance?",Fileservice,259
+"Hey there, I need to request access to a file share. Could someone please get me set up with the right permissions?",Fileservice,181
+"Hey, could you grant me read and write access to J:/ÖFZFOX/MOM-OSR? I need to be able to work with the files in that folder. Appreciate it!",Fileservice,272
+"Hi, I need help recovering some files from my computer — I think they may have been lost or deleted and I really need to get them back if possible.",Fileservice,255
+"Hi, could you set up a Basis User account for [USERNAME]? This is for [NAME] from [COMPANY] based in [LOCATION]. Please let me know if you need anything else!",Support general,559
+I keep getting an error when I try to connect to [URL] — it just won't load no matter what I try. Can someone take a look at what's going on?,Support general,531
+"Hi there, could you please remove a user's access from a specific file share? They no longer need it and we'd like to get that taken care of.",Fileservice,214
+"Hi, I need the printers [SERVER] and 03 installed on my computer. Could someone help me get both of them set up? I haven't been able to add them on my own.",Computer-Services,74
+"Hi, I'm trying to access the J:/ZR-VVM folder but I don't seem to have permissions. Could you please grant me read/write access to that share?",Fileservice,184
+"Requesting that [SERVER] be fully decommissioned — can you remove it from Nexthink, check on any IP reservations that might still be in place, and notify the network team to remove the firewall rules?",EOL,116
+"Hi, I have a new team member joining and they'll need a Windows account set up along with email, Skype, and the standard file share access. Can you get that created for them? Let me know if you need any additional details.",Active Directory,39
+"Hi, I need help getting the Longavi multifunction printer installed. Could someone come by and set it up? I haven't been able to get it working on my own.",Computer-Services,71
+"Hi there, we have a new user who needs an account set up. They'll need a Windows login, an Exchange email, Skype, and access to the standard shared drives. Could you get that created for them?",Support general,501
+"Hello, I need read/write access to J:/LTR and J:/Projekte, and I also need to be added to the AD group Project_Manager_TP in [LOCATION]. Could you help with all of that?",Fileservice,171
+"Hi, could someone help me get a printer installed on my computer? I'm not sure how to set it up myself. Thanks!",Computer-Services,77
+"Hi, could you please create a Light (external) user account with email and basic system access for an external user? Thanks so much!",Support general,569
+"Hey, I'm having an issue with my headphones — can someone from IT help me out?",Support general,576
+"Hi, we have a new employee starting soon and need to get them set up with a Windows account, email, Skype, and access to the standard file shares. Could you help get that all created? Thanks!",Active Directory,30
+"Hello, I need a Light user account created for an external user — the username is [USERNAME] and the person's name is [NAME]. Could you get that set up when you have a chance? Thanks!",Support general,549
+"Hey, we're decommissioning [SERVER] and need the Nexthink entry removed, any IP reservations reviewed, and the network team looped in to remove the firewall rules. Can you take care of that?",EOL,142
+"Hi, I need a printer installed on [SERVER]. Could someone help get that set up when you have a moment? Thanks!",Computer-Services,82
+"Hello, could you please create a light external user account for someone outside our organization? They just need basic email access and standard system access. Thank you!",Support general,479
+"Hello, I'd like to request a new user account to be created for me. Could someone help get that set up when you have a chance? Thanks in advance!",Fileservice,196
