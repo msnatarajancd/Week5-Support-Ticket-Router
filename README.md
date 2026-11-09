@@ -82,4 +82,4 @@ The tests cover split integrity, duplicate/conflict handling, sparse classes, me
 
 The unchanged starter notebook and provenance are in original/. The official source is https://github.com/The-Gen-Academy/5A-Fine-Tune-a-Support-Ticket-Router. Course materials are retained for this assignment; this repository does not grant a new license to third-party data or model weights. Inspect source/model licenses before redistributing.
 
-Model weights, credentials and environments are excluded from Git. This project has not been published to GitHub or submitted to the course form.
+Model weights, credentials and environments are excluded from Git. Public submission repository: https://github.com/msnatarajancd/Week5-Support-Ticket-Router. The course form has not been submitted. The Google Doc report is available to anyone with its link; the executed notebook is also included in this repository so reviewers can inspect its saved outputs without a GPU.
