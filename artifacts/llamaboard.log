@@ -1,0 +1,15 @@
+/usr/local/lib/python3.13/dist-packages/jieba/__init__.py:44: SyntaxWarning: invalid escape sequence '\.'
+  re_han_default = re.compile("([\u4E00-\u9FD5a-zA-Z0-9+#&\._%\-]+)", re.U)
+/usr/local/lib/python3.13/dist-packages/jieba/__init__.py:46: SyntaxWarning: invalid escape sequence '\s'
+  re_skip_default = re.compile("(\r\n|\s)", re.U)
+/usr/local/lib/python3.13/dist-packages/jieba/finalseg/__init__.py:78: SyntaxWarning: invalid escape sequence '\.'
+  re_skip = re.compile("([a-zA-Z0-9]+(?:\.\d+)?%?)")
+/usr/local/lib/python3.13/dist-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Visit http://ip:port for Web UI, e.g., http://127.0.0.1:7860
+* Running on local URL:  http://0.0.0.0:7860
+* To create a public link, set `share=True` in `launch()`.
+[WARNING|2026-11-08 21:54:49] llamafactory.webui.common:149 >> Found complex path, some features may be not available.
+[WARNING|2026-11-08 21:55:04] llamafactory.webui.common:149 >> Found complex path, some features may be not available.
+[WARNING|2026-11-08 21:55:12] llamafactory.webui.common:149 >> Found complex path, some features may be not available.
+[WARNING|2026-11-08 21:55:12] llamafactory.webui.common:149 >> Found complex path, some features may be not available.

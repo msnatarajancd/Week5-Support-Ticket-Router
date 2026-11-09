@@ -1,0 +1,625 @@
+{
+  "status": "preserved",
+  "source_revision": "05f7ea9643495741bda4e272bd1977105c3ad529",
+  "factory_revision": "f6355ab6a426eedb800742ecf61896f7bff95ebb",
+  "base_model": "Qwen/Qwen3-1.7B-Base",
+  "base_revision": "ea980cb0a6c2ae4b936e82123acc929f1cec04c1",
+  "gpu": "Tesla T4",
+  "max_training_tokens": 177,
+  "cutoff": 1024,
+  "dataset_sha256": "c55c98b462f1af9b2f5e4ad8a7460a6b598e55bcfa42da1b57dc9e921e82783f",
+  "recommended_config": {
+    "model_name_or_path": "/root/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1",
+    "stage": "sft",
+    "do_train": true,
+    "finetuning_type": "lora",
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_target": "all",
+    "dataset": "support_tickets",
+    "dataset_dir": "/content/LLaMA-Factory/data",
+    "template": "default",
+    "cutoff_len": 1024,
+    "max_samples": 100000,
+    "output_dir": "/content/drive/MyDrive/Week5-Support-Ticket-Router/training_runs/native-eos/adapter",
+    "logging_steps": 5,
+    "save_steps": 100,
+    "plot_loss": true,
+    "report_to": "none",
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 0.0001,
+    "num_train_epochs": 3.0,
+    "lr_scheduler_type": "cosine",
+    "warmup_ratio": 0.1,
+    "fp16": true,
+    "bf16": false,
+    "gradient_checkpointing": true,
+    "seed": 42,
+    "overwrite_output_dir": false
+  },
+  "actual_training_config": {
+    "cutoff_len": 1024,
+    "dataset": "support_tickets",
+    "dataset_dir": "data",
+    "ddp_timeout": 180000000,
+    "do_train": true,
+    "enable_thinking": false,
+    "finetuning_type": "lora",
+    "flash_attn": "auto",
+    "fp16": true,
+    "gradient_accumulation_steps": 8,
+    "gradient_checkpointing": true,
+    "include_num_input_tokens_seen": true,
+    "learning_rate": 0.0001,
+    "logging_steps": 5,
+    "lora_alpha": 16,
+    "lora_dropout": 0,
+    "lora_rank": 8,
+    "lora_target": "all",
+    "lr_scheduler_type": "cosine",
+    "max_grad_norm": 1.0,
+    "max_samples": 100000,
+    "model_name_or_path": "/root/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1",
+    "num_train_epochs": 3.0,
+    "optim": "adamw_torch",
+    "output_dir": "/content/drive/MyDrive/Week5-Support-Ticket-Router/training_runs/native-eos/adapter",
+    "packing": false,
+    "per_device_train_batch_size": 1,
+    "plot_loss": true,
+    "preprocessing_num_workers": 16,
+    "report_to": "none",
+    "save_steps": 100,
+    "seed": 42,
+    "stage": "sft",
+    "template": "default",
+    "trust_remote_code": true,
+    "warmup_ratio": 0.1,
+    "warmup_steps": 0
+  },
+  "heldout_rows": 117,
+  "smoke_passed": 6,
+  "smoke_total": 7,
+  "merge_smoke_agreement": true,
+  "metrics": {
+    "baseline": {
+      "accuracy": 0.358974358974359,
+      "macro_f1": 0.3003638446406858,
+      "invalid_count": 0,
+      "per_class": {
+        "Support general": {
+          "precision": 0.358974358974359,
+          "recall": 0.4666666666666667,
+          "f1-score": 0.4057971014492754,
+          "support": 30.0
+        },
+        "Fileservice": {
+          "precision": 0.5384615384615384,
+          "recall": 0.5,
+          "f1-score": 0.5185185185185185,
+          "support": 28.0
+        },
+        "O365": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 18.0
+        },
+        "EOL": {
+          "precision": 0.6666666666666666,
+          "recall": 0.16666666666666666,
+          "f1-score": 0.26666666666666666,
+          "support": 12.0
+        },
+        "Software": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 12.0
+        },
+        "Active Directory": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 9.0
+        },
+        "Computer-Services": {
+          "precision": 0.14634146341463414,
+          "recall": 0.75,
+          "f1-score": 0.24489795918367346,
+          "support": 8.0
+        }
+      },
+      "confusion_labels": [
+        "Support general",
+        "Fileservice",
+        "O365",
+        "EOL",
+        "Software",
+        "Active Directory",
+        "Computer-Services",
+        "__invalid__"
+      ],
+      "confusion_counts": [
+        [
+          14,
+          6,
+          1,
+          0,
+          0,
+          1,
+          8,
+          0
+        ],
+        [
+          2,
+          14,
+          0,
+          0,
+          0,
+          0,
+          12,
+          0
+        ],
+        [
+          10,
+          5,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          10,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          6,
+          0,
+          1,
+          0
+        ],
+        [
+          7,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "fine_tuned": {
+      "accuracy": 0.8461538461538461,
+      "macro_f1": 0.827217434246239,
+      "invalid_count": 0,
+      "per_class": {
+        "Support general": {
+          "precision": 0.9130434782608695,
+          "recall": 0.7,
+          "f1-score": 0.7924528301886793,
+          "support": 30.0
+        },
+        "Fileservice": {
+          "precision": 0.9333333333333333,
+          "recall": 1.0,
+          "f1-score": 0.9655172413793104,
+          "support": 28.0
+        },
+        "O365": {
+          "precision": 0.85,
+          "recall": 0.9444444444444444,
+          "f1-score": 0.8947368421052632,
+          "support": 18.0
+        },
+        "EOL": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 12.0
+        },
+        "Software": {
+          "precision": 0.5,
+          "recall": 0.75,
+          "f1-score": 0.6,
+          "support": 12.0
+        },
+        "Active Directory": {
+          "precision": 0.875,
+          "recall": 0.7777777777777778,
+          "f1-score": 0.8235294117647058,
+          "support": 9.0
+        },
+        "Computer-Services": {
+          "precision": 0.8333333333333334,
+          "recall": 0.625,
+          "f1-score": 0.7142857142857143,
+          "support": 8.0
+        }
+      },
+      "confusion_labels": [
+        "Support general",
+        "Fileservice",
+        "O365",
+        "EOL",
+        "Software",
+        "Active Directory",
+        "Computer-Services",
+        "__invalid__"
+      ],
+      "confusion_counts": [
+        [
+          21,
+          0,
+          0,
+          0,
+          9,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          17,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          12,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          9,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          7,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "accuracy_delta": 0.48717948717948717
+  },
+  "merged_checkpoint": "/content/week5-router/merged_model",
+  "adapter_checkpoint": "/content/drive/MyDrive/Week5-Support-Ticket-Router/training_runs/native-eos/adapter",
+  "persistent_directory": "/content/drive/MyDrive/Week5-Support-Ticket-Router",
+  "checkpoint_files": {
+    "adapter": [
+      {
+        "path": "llamaboard_config.yaml",
+        "bytes": 2432,
+        "sha256": "60881601019973a6064eb59b6e315dfc4ec528c78733df6e66e250cc6d8c96ff"
+      },
+      {
+        "path": "webui_subprocess.log",
+        "bytes": 52890,
+        "sha256": "257130329b95cfecbe2ac997fe628123044f9f5a271ea412fe7a9f9b34d74c02"
+      },
+      {
+        "path": "training_args.yaml",
+        "bytes": 919,
+        "sha256": "a2c35ad0bba0f0ae0a21338d533d215e9dac9655faf54b6e9812db53d9bf78de"
+      },
+      {
+        "path": "running_log.txt",
+        "bytes": 21614,
+        "sha256": "ff0678a82e615f0b3e60b2669f5b096e4d9dfc71529a3009ce248949d0e8f9a3"
+      },
+      {
+        "path": "trainer_log.jsonl",
+        "bytes": 8940,
+        "sha256": "eaff6b78e83a9f04bcf3bbf00704be6785739eedb77bf3838ba5794a88e112a3"
+      },
+      {
+        "path": "README.md",
+        "bytes": 1739,
+        "sha256": "b98b5ddbc93c5694308dcb2bf403a1d16bbc926a96163c2fb5dea5a19d4c0ed5"
+      },
+      {
+        "path": "adapter_model.safetensors",
+        "bytes": 34916720,
+        "sha256": "f018b6600956165f87c064a650b323b1988f5f6a30b9b8914aaadb21723edd98"
+      },
+      {
+        "path": "adapter_config.json",
+        "bytes": 1136,
+        "sha256": "d4d0855eee4a774290d58cff2544539f06f2fe1de508c8148b4e4a13fc972c90"
+      },
+      {
+        "path": "chat_template.jinja",
+        "bytes": 550,
+        "sha256": "a13337ea164ac47b2c1e644b6338d5e7e91cdcb58218511899c083112472730c"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 723,
+        "sha256": "35b8f02b7608dacadd97cc6f140b23c6dff064a489d1078008298c39d8c02ba3"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 11422650,
+        "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+      },
+      {
+        "path": "training_args.bin",
+        "bytes": 5969,
+        "sha256": "eb00dde9af8f0793a25ec33fb4bf298e61c451eb68a4c7b1c7d4ff4dfa57f791"
+      },
+      {
+        "path": "train_results.json",
+        "bytes": 239,
+        "sha256": "1635fe3335983e237d0ac5f7efc2ff88a4b4dd54fe48a52ef66933bae2fd0b9f"
+      },
+      {
+        "path": "all_results.json",
+        "bytes": 239,
+        "sha256": "1635fe3335983e237d0ac5f7efc2ff88a4b4dd54fe48a52ef66933bae2fd0b9f"
+      },
+      {
+        "path": "trainer_state.json",
+        "bytes": 11452,
+        "sha256": "ea3006ff175a1853f8c0f612b5418ed30ce4b9bb117138196c3a4bb858b6bfc7"
+      },
+      {
+        "path": "training_loss.png",
+        "bytes": 33201,
+        "sha256": "5eca21f330984f4ec8c42dc83e10cf207e15524f2c4137503a300a7b51a62a22"
+      },
+      {
+        "path": "checkpoint-100/README.md",
+        "bytes": 5388,
+        "sha256": "bdfdcd1f07e60ea0b20aee0e408ae1d41b64b0d3dc5aa1536b97430f5e133eec"
+      },
+      {
+        "path": "checkpoint-100/adapter_model.safetensors",
+        "bytes": 34916720,
+        "sha256": "ff6cede826025815214e513d451b49bd0d21b68092e663ebb12ef2c1e4523584"
+      },
+      {
+        "path": "checkpoint-100/adapter_config.json",
+        "bytes": 1136,
+        "sha256": "d4d0855eee4a774290d58cff2544539f06f2fe1de508c8148b4e4a13fc972c90"
+      },
+      {
+        "path": "checkpoint-100/chat_template.jinja",
+        "bytes": 550,
+        "sha256": "a13337ea164ac47b2c1e644b6338d5e7e91cdcb58218511899c083112472730c"
+      },
+      {
+        "path": "checkpoint-100/tokenizer_config.json",
+        "bytes": 723,
+        "sha256": "35b8f02b7608dacadd97cc6f140b23c6dff064a489d1078008298c39d8c02ba3"
+      },
+      {
+        "path": "checkpoint-100/tokenizer.json",
+        "bytes": 11422650,
+        "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+      },
+      {
+        "path": "checkpoint-100/training_args.bin",
+        "bytes": 5969,
+        "sha256": "eb00dde9af8f0793a25ec33fb4bf298e61c451eb68a4c7b1c7d4ff4dfa57f791"
+      },
+      {
+        "path": "checkpoint-100/optimizer.pt",
+        "bytes": 70059963,
+        "sha256": "012bd0643b27f81fa099cd379f4b1c3613b50e6c34a10ac5bd6f92e7eb9ee388"
+      },
+      {
+        "path": "checkpoint-100/scheduler.pt",
+        "bytes": 1465,
+        "sha256": "5f42f1c47fec8ac47a7f309a4536bfc55b35fd0276ea1ab216fb91b27765c804"
+      },
+      {
+        "path": "checkpoint-100/scaler.pt",
+        "bytes": 1383,
+        "sha256": "c4393a84a3109995aa1202073b039b12062e3189ed89aa0b94ef0510ba843009"
+      },
+      {
+        "path": "checkpoint-100/rng_state.pth",
+        "bytes": 14645,
+        "sha256": "098b29492211804ab324a36f37466821d948280bb74fce4ba895c03f13ecd878"
+      },
+      {
+        "path": "checkpoint-100/trainer_state.json",
+        "bytes": 6693,
+        "sha256": "ea82cbe412512c05dc31d2bb31cb556c43223cc312171e7cf256d29aaca84889"
+      },
+      {
+        "path": "checkpoint-177/README.md",
+        "bytes": 5388,
+        "sha256": "bdfdcd1f07e60ea0b20aee0e408ae1d41b64b0d3dc5aa1536b97430f5e133eec"
+      },
+      {
+        "path": "checkpoint-177/adapter_model.safetensors",
+        "bytes": 34916720,
+        "sha256": "f018b6600956165f87c064a650b323b1988f5f6a30b9b8914aaadb21723edd98"
+      },
+      {
+        "path": "checkpoint-177/adapter_config.json",
+        "bytes": 1136,
+        "sha256": "d4d0855eee4a774290d58cff2544539f06f2fe1de508c8148b4e4a13fc972c90"
+      },
+      {
+        "path": "checkpoint-177/chat_template.jinja",
+        "bytes": 550,
+        "sha256": "a13337ea164ac47b2c1e644b6338d5e7e91cdcb58218511899c083112472730c"
+      },
+      {
+        "path": "checkpoint-177/tokenizer_config.json",
+        "bytes": 723,
+        "sha256": "35b8f02b7608dacadd97cc6f140b23c6dff064a489d1078008298c39d8c02ba3"
+      },
+      {
+        "path": "checkpoint-177/tokenizer.json",
+        "bytes": 11422650,
+        "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+      },
+      {
+        "path": "checkpoint-177/training_args.bin",
+        "bytes": 5969,
+        "sha256": "eb00dde9af8f0793a25ec33fb4bf298e61c451eb68a4c7b1c7d4ff4dfa57f791"
+      },
+      {
+        "path": "checkpoint-177/optimizer.pt",
+        "bytes": 70059963,
+        "sha256": "7b6ec6e9ca60f3b4382c8bf9f91182c60e843269533d327dc2d8e3a785c19002"
+      },
+      {
+        "path": "checkpoint-177/scheduler.pt",
+        "bytes": 1465,
+        "sha256": "2c1831e1d184ec11ab9027d0dd1451ddb6b0c4e1f2a323644d611d7c7e8cccee"
+      },
+      {
+        "path": "checkpoint-177/scaler.pt",
+        "bytes": 1383,
+        "sha256": "103b56bb5b569966ab70e5b26cc08beda8d88a60f11983e4d6fc47ef8302dfc0"
+      },
+      {
+        "path": "checkpoint-177/rng_state.pth",
+        "bytes": 14645,
+        "sha256": "f4a9f217e852f439efa6bd32fde98d6867f11aa6ea13ddc021ba10af6a0b0934"
+      },
+      {
+        "path": "checkpoint-177/trainer_state.json",
+        "bytes": 11170,
+        "sha256": "0f5eab5519f9e79065d06f589ab18fbe0580929d2ef871a051ff0b08756b6bb8"
+      }
+    ],
+    "merged_model": [
+      {
+        "path": "chat_template.jinja",
+        "bytes": 550,
+        "sha256": "a13337ea164ac47b2c1e644b6338d5e7e91cdcb58218511899c083112472730c"
+      },
+      {
+        "path": "config.json",
+        "bytes": 1415,
+        "sha256": "f1ff616b8b89e1b9e7f4efcbc85500a09999a8402a10f669d866af37db6127da"
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 174,
+        "sha256": "5346fdbb6c5259b40289450be60a4857b30b6af0659031d196fb0ae00f0b6add"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 3441185296,
+        "sha256": "e1eeefcc438b65efab6d48e5ea1008fb5713e59c31e4df5dd2222c876387e18d"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 696,
+        "sha256": "5f007d04324afa93876e2a484190e868136c69dfe0e1a29a1063eae583df9d32"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 11422650,
+        "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+      }
+    ],
+    "training_tokenizer": [
+      {
+        "path": "chat_template.jinja",
+        "bytes": 550,
+        "sha256": "a13337ea164ac47b2c1e644b6338d5e7e91cdcb58218511899c083112472730c"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 696,
+        "sha256": "5f007d04324afa93876e2a484190e868136c69dfe0e1a29a1063eae583df9d32"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 11422650,
+        "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+      }
+    ]
+  }
+}

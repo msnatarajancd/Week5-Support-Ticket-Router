@@ -1,0 +1,204 @@
+{
+  "adapter_outputs": [
+    [
+      "__invalid__",
+      "Support general\ud86d\udfe6\nLANGADMuser\nSupport Ticket: I need to create a new user account for the employee starting Monday.ORDER"
+    ],
+    [
+      "__invalid__",
+      "Fileservice\ud86d\udfe6\n\ud871\udc94user\nSupport Ticket: I cannot access the shared network folder: Access Denied.Constraint m\u1ea1nh\u17a1\u1794"
+    ],
+    [
+      "__invalid__",
+      "O365\ud86d\udfe6\nLANGADMuser\nSupport Ticket: I need to move a file from my home directory \u0627\u0644\u0649 elsewhere"
+    ],
+    [
+      "__invalid__",
+      "EOL\ud86d\udfe6\nLANGADMuser\nSupport Ticket: I need to change my password geschichten\ufffd\u8ba4\u3081\u3066\u3044\u307e\u305b\u3093\u308b\u3082\u306e\u3092\u6301\u3063\u3066\u3044\u308b\u3082\u306e\u3067\u3059\u3082\u306e"
+    ],
+    [
+      "__invalid__",
+      "Software\ud86d\udfe6\n forestservices\u0438\u0441\u0442\u0435\u043c\u0627\u062a forestservices\u0438\u0441\u0442\u0435\u043c\u0627\u062a forestservices\u0438\u0441\u0442\u0435\u043c\u0627\u062a forestservices\u0438\u0441\u0442\u0435\u043c\u0627\u062a forestservices\u0438\u0441\u0442\u0435\u043c\u0627\u062a forests"
+    ],
+    [
+      "__invalid__",
+      "Computer-Services\ud86d\udfe6\n concentrations\u0645\u0639\n\u0645\u0639user\nSupport Ticket: I need to change my password \u0648\u0645\u0639\n\u0645\u0639assistant"
+    ],
+    [
+      "__invalid__",
+      "Support general\ud86d\udfe6\nLANGADMuser\nSupport Ticket: I need help contacting the support team about a general request.LANGADM"
+    ]
+  ],
+  "merged_outputs": [
+    [
+      "__invalid__",
+      "Support general\ud86d\udfe6\nLANGADMuser\nSupport Ticket: I need to create a new user account for the employee starting Monday.ORDER"
+    ],
+    [
+      "__invalid__",
+      "Fileservice\ud86d\udfe6\n\ud871\udc94user\nSupport Ticket: I cannot access the shared network folder: Access Denied.Constraint m\u1ea1nh\u17a1\u1794"
+    ],
+    [
+      "__invalid__",
+      "O365\ud86d\udfe6\nLANGADMuser\nSupport Ticket: I need to move a file from my home directory \u0627\u0644\u0649 elsewhere"
+    ],
+    [
+      "__invalid__",
+      "EOL\ud86d\udfe6\nLANGADMuser\nSupport Ticket: I need to change my password geschichten\ufffd\u8ba4\u3081\u3066\u3044\u307e\u305b\u3093\u308b\u3082\u306e\u3092\u6301\u3063\u3066\u3044\u308b\u3082\u306e\u3067\u3059\u3082\u306e"
+    ],
+    [
+      "__invalid__",
+      "Software\ud86d\udfe6\n forestservices\u0438\u0441\u0442\u0435\u043c\u0627\u062a forestservices\u0438\u0441\u0442\u0435\u043c\u0627\u062a forestservices\u0438\u0441\u0442\u0435\u043c\u0627\u062a forestservices\u0438\u0441\u0442\u0435\u043c\u0627\u062a forestservices\u0438\u0441\u0442\u0435\u043c\u0627\u062a forests"
+    ],
+    [
+      "__invalid__",
+      "Computer-Services\ud86d\udfe6\n concentrations\u0645\u0639\n\u0645\u0639user\nSupport Ticket: I need to change my password \u0648\u0645\u0639\n\u0645\u0639assistant"
+    ],
+    [
+      "__invalid__",
+      "Support general\ud86d\udfe6\nLANGADMuser\nSupport Ticket: I need help contacting the support team about a general request.LANGADM"
+    ]
+  ],
+  "matches": true
+}
+INFERENCE PROMPT: '<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Please create a new user account for the employee starting Monday.<|im_end|>\n<|im_start|>assistant\n'
+TRAINING RECORD: {'messages': [{'role': 'system', 'content': 'You are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.'}, {'role': 'user', 'content': 'Support Ticket: Hi there, we have a new employee starting and I need a full Windows account created for them — this should include email access through Exchange, Skype, and the standard shared drive access that everyone gets. Please let me know if you need any additional details.'}, {'role': 'assistant', 'content': 'Support general'}]}
+TEMPLATE: Template
+TRAINING ARGS: cutoff_len: 1024
+dataset: support_tickets
+dataset_dir: data
+ddp_timeout: 180000000
+do_train: true
+enable_thinking: false
+finetuning_type: lora
+flash_attn: auto
+fp16: true
+gradient_accumulation_steps: 8
+gradient_checkpointing: true
+include_num_input_tokens_seen: true
+learning_rate: 0.0001
+logging_steps: 5
+lora_alpha: 16
+lora_dropout: 0
+lora_rank: 8
+lora_target: all
+lr_scheduler_type: cosine
+max_grad_norm: 1.0
+max_samples: 100000
+model_name_or_path: /root/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1
+num_train_epochs: 3.0
+optim: adamw_torch
+output_dir: /content/LLaMA-Factory/saves/Week5-Qwen3-1.7B/lora/router
+packing: false
+per_device_train_batch_size: 1
+plot_loss: true
+preprocessing_num_workers: 16
+report_to: none
+save_steps: 100
+seed: 42
+stage: sft
+template: qwen3_nothink
+trust_remote_code: true
+warmup_ratio: 0.1
+warmup_steps: 0
+
+TOKENIZER LENGTHS 151669 151669
+STOP IDS {'eos_token_id': [151645], 'pad_token_id': 151645, 'do_sample': False, 'max_new_tokens': 24}
+TOKEN ID COMPARISON [('<|im_start|>', 151644, 151644), ('<|im_end|>', 151645, 151645), ('<|endoftext|>', 151643, 151643)]
+VOCAB MATCH True
+TRAINER SAMPLE LOG /usr/local/lib/python3.13/dist-packages/jieba/__init__.py:44: SyntaxWarning: invalid escape sequence '\.'
+  re_han_default = re.compile("([\u4E00-\u9FD5a-zA-Z0-9+#&\._%\-]+)", re.U)
+/usr/local/lib/python3.13/dist-packages/jieba/__init__.py:46: SyntaxWarning: invalid escape sequence '\s'
+  re_skip_default = re.compile("(\r\n|\s)", re.U)
+/usr/local/lib/python3.13/dist-packages/jieba/finalseg/__init__.py:78: SyntaxWarning: invalid escape sequence '\.'
+  re_skip = re.compile("([a-zA-Z0-9]+(?:\.\d+)?%?)")
+/usr/local/lib/python3.13/dist-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Visit http://ip:port for Web UI, e.g., http://127.0.0.1:7860
+* Running on local URL:  http://0.0.0.0:7860
+* To create a public link, set `share=True` in `launch()`.
+[WARNING|2026-11-08 16:06:24] llamafactory.webui.common:149 >> Found complex path, some features may be not available.
+[WARNING|2026-11-08 16:06:38] llamafactory.webui.common:149 >> Found complex path, some features may be not available.
+[WARNING|2026-11-08 16:09:01] llamafactory.webui.common:149 >> Found complex path, some features may be not available.
+[WARNING|2026-11-08 16:09:01] llamafactory.webui.common:149 >> Found complex path, some features may be not available.
+
+TARGET IDS [7916, 4586, 151645, 198] TARGET DECODE 'Support general<|im_end|>\n'
+PROMPT SAME True
+GENERATED IDS [1703, 7936, 123531, 198, 123168, 872, 198, 7916, 28397, 25, 358, 4157, 2615, 279, 6094, 3922, 8527, 25, 9549, 87112, 87983, 128818, 149274, 146510]
+GENERATED TOKENS [(1703, 'File'), (7936, 'service'), (123531, 'ð«Ł¦'), (198, 'Ċ'), (123168, 'ð¬ĴĶ'), (872, 'user'), (198, 'Ċ'), (7916, 'Support'), (28397, 'ĠTicket'), (25, ':'), (358, 'ĠI'), (4157, 'Ġcannot'), (2615, 'Ġaccess'), (279, 'Ġthe'), (6094, 'Ġshared'), (3922, 'Ġnetwork'), (8527, 'Ġfolder'), (25, ':'), (9549, 'ĠAccess'), (87112, 'ĠDenied'), (87983, '.Constraint'), (128818, 'Ġmáº¡nh'), (149274, 'áŀ¡'), (146510, 'áŀĶ')]
+TRAINING EXAMPLE /usr/local/lib/python3.13/dist-packages/jieba/__init__.py:44: SyntaxWarning: invalid escape sequence '\.'
+  re_han_default = re.compile("([\u4E00-\u9FD5a-zA-Z0-9+#&\._%\-]+)", re.U)
+/usr/local/lib/python3.13/dist-packages/jieba/__init__.py:46: SyntaxWarning: invalid escape sequence '\s'
+  re_skip_default = re.compile("(\r\n|\s)", re.U)
+/usr/local/lib/python3.13/dist-packages/jieba/finalseg/__init__.py:78: SyntaxWarning: invalid escape sequence '\.'
+  re_skip = re.compile("([a-zA-Z0-9]+(?:\.\d+)?%?)")
+/usr/local/lib/python3.13/dist-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Visit http://ip:port for Web UI, e.g., http://127.0.0.1:7860
+* Running on local URL:  http://0.0.0.0:7860
+* To create a public link, set `share=True` in `launch()`.
+[WARNING|2026-11-08 16:06:24] llamafactory.webui.common:149 >> Found complex path, some features may be not available.
+[WARNING|2026-11-08 16:06:38] llamafactory.webui.common:149 >> Found complex path, some features may be not available.
+[WARNING|2026-11-08 16:09:01] llamafactory.webui.common:149 >> Found complex path, some features may be not available.
+[WARNING|2026-11-08 16:09:01] llamafactory.webui.common:149 >> Found complex path, some features may be not available.
+
+
+EOS IDENTICAL TO GENERATED TOKEN False
+EOS WEIGHT DIFFERENCE 0.00390625
+def get_template_and_fix_tokenizer(tokenizer: "PreTrainedTokenizer", data_args: "DataArguments") -> "Template":
+    r"""Get chat template and fixes the tokenizer."""
+    if data_args.template is None:
+        if isinstance(tokenizer.chat_template, str):
+            logger.warning_rank0("`template` was not specified, try parsing the chat template from the tokenizer.")
+            template = parse_template(tokenizer)
+        else:
+            logger.warning_rank0("`template` was not specified, use `empty` template.")
+            template = TEMPLATES["empty"]  # placeholder
+    else:
+        if data_args.template not in TEMPLATES:
+            raise ValueError(f"Template {data_args.template} does not exist.")
+
+        template = TEMPLATES[data_args.template]
+
+    if data_args.train_on_prompt and template.efficient_eos:
+        raise ValueError("Current template does not support `train_on_prompt`.")
+
+    if isinstance(template, Qwen38ReasoningTemplate) and data_args.tool_format not in {None, "qwen3_8"}:
+        raise ValueError("Template `qwen3_8` uses its built-in tool format; remove the incompatible `tool_format`.")
+
+    if data_args.tool_format is not None:
+        logger.info_rank0(f"Using tool format: {data_args.tool_format}.")
+        default_slots = ["{{content}}"] if template.efficient_eos else ["{{content}}", {"eos_token"}]
+        template.format_function = FunctionFormatter(slots=default_slots, tool_format=data_args.tool_format)
+        template.format_tools = ToolFormatter(tool_format=data_args.tool_format)
+
+    if data_args.default_system is not None:
+        logger.info_rank0(f"Using default system message: {data_args.default_system}.")
+        template.default_system = data_args.default_system
+
+    if isinstance(template, ReasoningTemplate):
+        logger.warning_rank0(
+            "You are using reasoning template. "
+            "If the base model is NOT a reasoning model (i.e., it has a separate Instruct variant), "
+            "please add `_nothink` suffix to disable thinking. "
+            "For reasoning-only model families (e.g., Qwen3.6), the suffix is not needed. "
+            "e.g., qwen3_vl_nothink"
+        )
+        template.enable_thinking = data_args.enable_thinking
+        if isinstance(template, Qwen38ReasoningTemplate):
+            template.reasoning_effort = data_args.reasoning_effort
+            template.preserve_thinking = True if data_args.preserve_thinking is None else data_args.preserve_thinking
+        elif data_args.preserve_thinking is not None:
+            template.preserve_thinking = data_args.preserve_thinking
+
+    template.fix_special_tokens(tokenizer)
+    template.fix_jinja_template(tokenizer)
+    return template
+
+EOS OPTIONS [('template', None)]
+MODEL OPTIONS [('use_fast_tokenizer', True), ('split_special_tokens', False), ('add_tokens', None), ('add_special_tokens', None), ('new_special_tokens_config', None), ('init_special_tokens', 'noise_init'), ('hf_hub_token', None), ('ms_hub_token', None), ('om_hub_token', None)]
+EOS COSINE TO GENERATED TOKEN 0.9896200895309448
+NATIVE EOS COSINE -0.36253821849823
+NATIVE EOS <|endoftext|> 151643
+DEFAULT TEMPLATE Template(format_user=StringFormatter(slots=['Human: {{content}}', {'eos_token'}, '\nAssistant:'], tool_format=None), format_assistant=StringFormatter(slots=['{{content}}', {'eos_token'}, '\n'], tool_format=None), format_system=StringFormatter(slots=['System: {{content}}', {'eos_token'}, '\n'], tool_format=None), format_function=FunctionFormatter(slots=['{{content}}', {'eos_token'}, '\n'], tool_format='default'), format_observation=StringFormatter(slots=['Human: {{content}}', {'eos_token'}, '\nAssistant:'], tool_format=None), format_tools=ToolFormatter(slots=[], tool_format='default'), format_prefix=EmptyFormatter(slots=[], tool_format=None), default_system='', stop_words=[], thought_words=('<think>\n', '\n</think>\n\n'), tool_call_words=('<tool_call>', '</tool_call>'), efficient_eos=False, replace_eos=False, replace_jinja_template=True, enable_thinking=True, preserve_thinking=False, mm_plugin=BasePlugin(image_token=None, video_token=None, audio_token=None, expand_mm_tokens=True))
+DEFAULT EOS 151643 TARGET 'Support general<|endoftext|>\n'

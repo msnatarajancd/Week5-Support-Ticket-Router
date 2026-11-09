@@ -27,12 +27,16 @@ code('''
 import os, sys, subprocess, json, hashlib, shutil, time
 from pathlib import Path
 import torch
+from google.colab import drive
+drive.mount('/content/drive')
+PERSIST = Path('/content/drive/MyDrive/Week5-Support-Ticket-Router')
+PERSIST.mkdir(parents=True,exist_ok=True)
 assert torch.cuda.is_available(), 'Select a T4 GPU runtime before continuing.'
 GPU = torch.cuda.get_device_name(0)
 assert 'T4' in GPU, f'This approved run requires a T4; allocated {GPU}'
 ROOT = Path('/content/week5-router')
 ROOT.mkdir(exist_ok=True)
-ART = ROOT/'artifacts'; ART.mkdir(exist_ok=True)
+ART = PERSIST/'live_evidence'; ART.mkdir(exist_ok=True)
 FACTORY = Path('/content/LLaMA-Factory')
 if not FACTORY.exists():
     subprocess.run(['git','clone','--depth','1','https://github.com/hiyouga/LLaMA-Factory.git',str(FACTORY)],check=True)
@@ -77,7 +81,7 @@ records = json.loads((ART/'data/train.json').read_text())
 max_length = max(len(tokenizer.encode(tokenizer.apply_chat_template(x['messages'],tokenize=False),add_special_tokens=False)) for x in records)
 CUTOFF = max(1024, ((max_length+63)//64)*64)
 assert CUTOFF <= 4096, 'Unexpectedly long data: inspect before training'
-ADAPTER_DIR = FACTORY/'saves/Week5-Qwen3-1.7B/lora/router'
+ADAPTER_DIR = PERSIST/'training_runs/native-eos/adapter'
 MERGED_DIR = ROOT/'merged_model'
 CONFIG = {'model_name_or_path':BASE_PATH,'stage':'sft','do_train':True,
     'finetuning_type':'lora','lora_rank':8,'lora_alpha':16,'lora_target':'all',
@@ -115,9 +119,24 @@ ui_process = subprocess.Popen(['llamafactory-cli','webui'],cwd=FACTORY,env=env,s
 print('LLaMA Board PID:',ui_process.pid)
 ''', 'board')
 code("print((ART/'llamaboard.log').read_text()[-12000:])\nfrom google.colab import output\noutput.serve_kernel_port_as_iframe(7860, height=900)", 'board_url')
-md('## 4. Review completed training\nRun only after LLaMA Board reports training completed. If its output path differs, set ADAPTER_DIR to the actual path before continuing.')
+md('## 4. Review completed training\nStart training in LLaMA Board first. This cell waits up to 40 minutes for a verified final checkpoint. The remaining evaluation and preservation cells may be queued behind it.')
 code('''
+# Wait for real completion before the queued evaluation cells.
+deadline=time.monotonic()+2400
+while True:
+    pending=ADAPTER_DIR/'trainer_state.json'
+    try:
+        done=json.loads(pending.read_text()) if pending.exists() else {}
+    except json.JSONDecodeError:
+        done={}
+    if done.get('global_step',0)>=done.get('max_steps',1)>0 and (ADAPTER_DIR/'all_results.json').exists():
+        break
+    if time.monotonic()>deadline:
+        raise TimeoutError('Training did not finish within 40 minutes; inspect logs')
+    time.sleep(15)
+print('Completed training checkpoint detected on Drive.')
 import matplotlib.pyplot as plt
+from IPython.display import display, Image
 assert (ADAPTER_DIR/'adapter_config.json').exists(), 'Adapter not saved yet'
 assert (ADAPTER_DIR/'adapter_model.safetensors').exists(), 'Missing adapter weights'
 state_path = ADAPTER_DIR/'trainer_state.json'
@@ -133,7 +152,8 @@ actual_config = validate_training_config(yaml.safe_load(actual_path.read_text())
 manifest['actual_training_config'] = actual_config
 plt.figure(figsize=(10,4)); plt.plot([x['current_steps'] for x in loss_logs],[x['loss'] for x in loss_logs])
 plt.xlabel('Step'); plt.ylabel('Training loss'); plt.title('Actual LoRA training loss'); plt.grid(alpha=.3)
-plt.tight_layout(); plt.savefig(ART/'training_curve.png',dpi=150); plt.show()
+plt.tight_layout(); plt.savefig(ART/'training_curve.png',dpi=150)
+display(Image(filename=str(ART/'training_curve.png')))
 print('Completed steps:',state['global_step'],'First/final loss:',loss_logs[0]['loss'],loss_logs[-1]['loss'])
 for name in ('trainer_state.json','trainer_log.jsonl','training_args.yaml','all_results.json','adapter_config.json'):
     if (ADAPTER_DIR/name).exists(): shutil.copy2(ADAPTER_DIR/name,ART/name)
@@ -217,13 +237,15 @@ cm=np.array(metrics['fine_tuned']['confusion_counts'])[:7,:]
 norm=np.divide(cm,cm.sum(axis=1,keepdims=True),out=np.zeros_like(cm,dtype=float),where=cm.sum(axis=1,keepdims=True)!=0)
 plt.figure(figsize=(11,7)); sns.heatmap(norm,annot=cm,fmt='d',xticklabels=list(LABELS)+['Invalid'],yticklabels=LABELS,cmap='Blues')
 plt.xlabel('Predicted'); plt.ylabel('True'); plt.xticks(rotation=35,ha='right'); plt.tight_layout()
-plt.savefig(ART/'confusion_matrix.png',dpi=150); plt.show()
+plt.savefig(ART/'confusion_matrix.png',dpi=150)
+display(Image(filename=str(ART/'confusion_matrix.png')))
 x=np.arange(8); fig,ax=plt.subplots(figsize=(12,5))
 for offset,key,title in ((-.18,'baseline','Base model'),(.18,'fine_tuned','Fine-tuned')):
     vals=[metrics[key]['per_class'][l]['f1-score'] for l in LABELS]+[metrics[key]['accuracy']]
     ax.bar(x+offset,vals,.36,label=title)
 ax.set_xticks(x,list(LABELS)+['Accuracy'],rotation=30,ha='right'); ax.set_ylim(0,1); ax.legend()
-fig.tight_layout(); fig.savefig(ART/'baseline_vs_finetuned.png',dpi=150); plt.show()
+fig.tight_layout(); fig.savefig(ART/'baseline_vs_finetuned.png',dpi=150)
+display(Image(filename=str(ART/'baseline_vs_finetuned.png')))
 manifest.update(status='evaluated',heldout_rows=len(validation),smoke_passed=int(smoke_df.correct.sum()),
     smoke_total=len(smoke_df),merge_smoke_agreement=True,metrics=metrics,
     merged_checkpoint=str(MERGED_DIR),adapter_checkpoint=str(ADAPTER_DIR))

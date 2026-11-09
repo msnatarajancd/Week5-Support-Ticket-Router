@@ -1,0 +1,8 @@
+ticket,expected,adapter,merged,correct
+Please create a new user account for the employee starting Monday.,Active Directory,Support general,Support general,False
+I cannot access the shared network folder: Access Denied.,Fileservice,Fileservice,Fileservice,True
+Outlook and Teams will not sync.,O365,O365,O365,True
+Please retire the old server and remove it from monitoring.,EOL,EOL,EOL,True
+Adobe Acrobat fails to install with error 1603.,Software,Software,Software,True
+The printer has a paper jam and will not print.,Computer-Services,Computer-Services,Computer-Services,True
+I need help contacting the support team about a general request.,Support general,Support general,Support general,True

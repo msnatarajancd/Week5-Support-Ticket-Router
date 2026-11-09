@@ -1,0 +1,63 @@
+{
+  "adapter_outputs": [
+    [
+      "Support general",
+      "Support general"
+    ],
+    [
+      "Fileservice",
+      "Fileservice"
+    ],
+    [
+      "O365",
+      "O365"
+    ],
+    [
+      "EOL",
+      "EOL"
+    ],
+    [
+      "Software",
+      "Software"
+    ],
+    [
+      "Computer-Services",
+      "Computer-Services"
+    ],
+    [
+      "Support general",
+      "Support general"
+    ]
+  ],
+  "merged_outputs": [
+    [
+      "Support general",
+      "Support general"
+    ],
+    [
+      "Fileservice",
+      "Fileservice"
+    ],
+    [
+      "O365",
+      "O365"
+    ],
+    [
+      "EOL",
+      "EOL"
+    ],
+    [
+      "Software",
+      "Software"
+    ],
+    [
+      "Computer-Services",
+      "Computer-Services"
+    ],
+    [
+      "Support general",
+      "Support general"
+    ]
+  ],
+  "matches": true
+}
